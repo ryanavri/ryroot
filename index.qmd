@@ -1,0 +1,25 @@
+---
+about:
+  template: jolla
+  image: "images/Djawatan.jpg"
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/ryanavri
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/alya321     
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/ryan-avriandy-951b97156/
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/alyafp/
+---
+
+::: {#about-block}
+:::
+
+# Welcome to our website!
+
+Ryroot terinspirasi dari akar, yang merupakan tonggak yang kokoh, terpendam di tanah namun bermanfaat besar bagi kelangsungan hidup tumbuhan. Semoga ryroot dapat bermanfaat dan menginspirasi pembaca.

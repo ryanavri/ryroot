@@ -1,0 +1,62 @@
+project:
+  type: website
+
+  preview: 
+    port: 5555
+    browser: true
+    watch-inputs: true
+    navigate: true
+
+  render:
+    - "*.qmd"
+
+freeze: true
+
+bibliography: files/bib/references.bib
+csl: files/bib/apa-single-spaced.csl
+language: files/bib/language-id.yml
+
+# Metadata stuff
+pagetitle: "Ryroot"
+description-meta: "Wildlife ecologist from the rain city"
+author-meta: "Ryroot"
+
+website:
+  title: "Ryroot"
+  
+  navbar:
+    pinned: true
+
+    left:
+      - text: "About"
+        href: "index.qmd"
+      - text: "Blog"
+        file: blog/index.qmd
+      - text: "Portfolios"
+        href: portfolio/index.qmd  
+      - text: "Gallery"
+        href: gallery/index.qmd          
+    
+    right:
+      - icon: github
+        aria-label: github
+        href: https://github.com/ryanavri
+        rel: me
+  
+  page-footer:
+    left: |
+      <span class="faux-block">All content licensed under<br>[{{< fa brands creative-commons >}} {{< fa brands creative-commons-by >}} Creative Commons CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)</span>      
+    right: |
+      <span class="faux-block">Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)</span>
+
+format:
+  html:
+    theme: 
+      - html/style.scss
+    toc: false
+    code-link: true
+    anchor-sections: true
+    fig-cap-location: margin
+    reference-location: margin
+    footnotes-hover: true
+    highlight-style: monokai
