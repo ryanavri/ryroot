@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: a7080e8c-49a0-47d0-8023-c360eb2ed339
+      url: 'https://ryroot.netlify.app'
