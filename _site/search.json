@@ -1,0 +1,128 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "blog/2023/09/12/R_in_ecology/index.html",
+    "href": "blog/2023/09/12/R_in_ecology/index.html",
+    "title": "Menggunakan R dalam kajian ekologi",
+    "section": "",
+    "text": "Ekologi, yang merupakan studi tentang interaksi antara organisme dan lingkungannya, adalah bidang yang bergantung pada analisis data untuk memahami sistem ekologi yang kompleks. Beberapa program statistik yang biasa digunakan oleh praktisi ekologi selain lembar kerja Excel diantaranya adalah PAST, IBM dan MATLAB yang memiliki GUI (graphical user interface), yaitu tampilan tatap muka yang memudahkan pengguna untuk mengoperasikan program tersebut. Selain itu ada juga R dan Phyton yang merupakan bahasa pemrograman, dimana penggunanya menulis code untuk menghasilkan suatu perhitungan statistik.\nPerkembangan terkini, banyak praktisi ekologi beralih ke bahasa pemrograman karena memudahkan mereka dalam menciptakan transparansi dan reproduksibilitas dibandingkan program yang memiliki GUI, dimana pengguna mencampur pemrosesan data dengan data itu sendiri (Ellison, 2010).\nDengan menggunakan bahasa pemrograman data awal terpisah dengan pemrosesan data itu sendiri, sehingga alur kerja analisis dapat terdokumentasikan dengan baik dan memudahkan orang lain untuk menelaah proses tersebut serta dapat mereplikasi analisis dengan mudah (Wilson et al., 2014).\nR merupakan salah satu bahasa pemrograman yang banyak dipakai oleh ekologi, karena berbeda dengan Phyton yang awalnya diciptakan untuk membuat aplikasi, R dari awal didesain untuk analisis, sehingga secara organik, praktisi statistik dan ekologi cenderung menggunakan R. Dalam perkembangannya, banyak ekologis membuat paket analisis data mereka sendiri di R, hingga kini, lebih dari 100 paket telah dibuat untuk analisis data secara spesifik di bidang ekologi dan lingkungan (CRAN:Environmetric)."
+  },
+  {
+    "objectID": "blog/2023/09/12/R_in_ecology/index.html#kelebihan",
+    "href": "blog/2023/09/12/R_in_ecology/index.html#kelebihan",
+    "title": "Menggunakan R dalam kajian ekologi",
+    "section": "Kelebihan",
+    "text": "Kelebihan\nSelain karena R merupakan program yang gratis, kelebihan lain yang ditawarkan adalah;\n\nOpen-source; Sistem operasi yang kode sumbernya tersedia untuk publik dan boleh dimodifiikasi, sehingga banyak komunitas dari berbagai disiplin ilmu turut berkontribusi aktif untuk mengembangkan paket-paket dan program statistik yang dibutuhkan secara spesifik pada disiplin ilmu tersebut. Kamu pun dapat membuat fungsi atau mengembangkan modifikasi dari analisis statitistik yang sudah ada.\nCross platform compatibility; R dapat digunakan di operating system manapun seperti Windows, Linux bahkan Android sekalipun. Data yang bisa digunakan dan diproduksi dalam program ini pun sangat beragam dari mulai excel spreadsheet seperti csv dan xls hingga data-data spasial seperti shapefile (shp) dan raster (tif). Bahkan R juga dapat diintegrasikan dengan bahasa pemrograman lainnya seperti C++, Java dan Phyton.\nPowerful graphic; R dapat membuat grafik indah dari yang statis hingga visualisasi data yang interaktif dan dinamis.\nQuarto; Dokumentasi multi-language versi pengembangan terbaru dari Rmarkdown untuk membuat laporan, presentasi, buku bahkan blog ini sekalipun dibuat menggunakan quarto. Output filenya juga beragam mulai dari html, pdf, docx, epub dll. Akademia juga menggunakan fitur ini untuk menulis artikel ilmiah maupun tesisnya, karena kamu bisa menulis, analisis dan visualisasi data di dalam lingkup R secara sekaligus."
+  },
+  {
+    "objectID": "blog/2023/09/12/R_in_ecology/index.html#kekurangan",
+    "href": "blog/2023/09/12/R_in_ecology/index.html#kekurangan",
+    "title": "Menggunakan R dalam kajian ekologi",
+    "section": "Kekurangan",
+    "text": "Kekurangan\n\nSteep learning curve; Mempelajari R untuk pertama kali biasanya agak sulit untuk seseorang yang belum pernah mempelajari bahasa pemrograman sama sekali, bahkan ada istilah R makes easy things hard, and hard things easy."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "September 1, 2023\n        \n        \n            Menggunakan R dalam kajian ekologi\n            \n                \n                    r\n                \n                \n                    statistics\n                \n                \n                    data science\n                \n                \n                    ecology\n                \n            \n            \n        \n    \n\n\nTidak ada yang cocok"
+  },
+  {
+    "objectID": "blog/index.html#section",
+    "href": "blog/index.html#section",
+    "title": "Blog",
+    "section": "",
+    "text": "September 1, 2023\n        \n        \n            Menggunakan R dalam kajian ekologi\n            \n                \n                    r\n                \n                \n                    statistics\n                \n                \n                    data science\n                \n                \n                    ecology\n                \n            \n            \n        \n    \n\n\nTidak ada yang cocok"
+  },
+  {
+    "objectID": "blog/templatenorun.html",
+    "href": "blog/templatenorun.html",
+    "title": "Blog",
+    "section": "",
+    "text": "September 1, 2023\n        \n        \n            Menggunakan R dalam kajian ekologi\n            \n                \n                    r\n                \n                \n                    statistics\n                \n                \n                    data science\n                \n                \n                    ecology\n                \n            \n            \n        \n    \n\n\nTidak ada yang cocok"
+  },
+  {
+    "objectID": "blog/templatenorun.html#section",
+    "href": "blog/templatenorun.html#section",
+    "title": "Blog",
+    "section": "",
+    "text": "September 1, 2023\n        \n        \n            Menggunakan R dalam kajian ekologi\n            \n                \n                    r\n                \n                \n                    statistics\n                \n                \n                    data science\n                \n                \n                    ecology\n                \n            \n            \n        \n    \n\n\nTidak ada yang cocok"
+  },
+  {
+    "objectID": "blog/templatenorun.html#section-1",
+    "href": "blog/templatenorun.html#section-1",
+    "title": "Blog",
+    "section": "2022",
+    "text": "2022\n\n\n\n\nTidak ada yang cocok"
+  },
+  {
+    "objectID": "gallery/index.html#gunung-kencana",
+    "href": "gallery/index.html#gunung-kencana",
+    "title": "Gallery",
+    "section": "Gunung Kencana",
+    "text": "Gunung Kencana"
+  },
+  {
+    "objectID": "gallery/index.html#trekking-batanta-salawati",
+    "href": "gallery/index.html#trekking-batanta-salawati",
+    "title": "Gallery",
+    "section": "Trekking Batanta & Salawati",
+    "text": "Trekking Batanta & Salawati"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to our website!",
+    "section": "",
+    "text": "Welcome to our website!\nRyroot terinspirasi dari akar, yang merupakan tonggak yang kokoh, terpendam di tanah namun bermanfaat besar bagi kelangsungan hidup tumbuhan. Dimulai dari inspirasi ini, pada tahun 2021, kami mulai menuangkan pengalaman dan pemikiran dalam bentuk tulisan yang dimuat dalam ryroots. Semoga ryroots dapat bermanfaat dan menginspirasi pembaca."
+  },
+  {
+    "objectID": "portfolio/index.html",
+    "href": "portfolio/index.html",
+    "title": "Portfolio",
+    "section": "",
+    "text": "Spencer, K.L., Deere, N.J., Aini, M., Avriandy, R., Campbell-Smith, G., Cheyne, S.M., Gaveau, D.L., Humle, T., Hutabarat, J., Loken, B. and Macdonald, D.W., (2023). Implications of large-scale infrastructure development for biodiversity in Indonesian Borneo. Science of the Total Environment, 866, p.161075. [PDF]\n\n\n\nPurbahapsari, A. F., & Batoarung, I. B. (2022). Geospatial Artificial Intelligence for Early Detection of Forest and Land Fires. KnE Social Sciences, 7(9), 312–327. https://doi.org/10.18502/kss.v7i9.10947.[PDF]\nSibarani, M.C., Albert, W.R., Ario, A., Ariyanto, T., Avriandy, R., Dinata, Y., Kharis, T., Kiswayadi, D., Nopandry, B., Novarino, W. and Radinal, 2022. Sumatra-wide assessment of spatiotemporal niche partitioning among small carnivore species. Mammalian Biology, 102(5-6), pp.2019-2032.\n\n\n\nAvriandy, R., Pinondang, I. M., Rostro-García, S., Kamler, J. F., Gunaryadi, D., Kholiq, N., & Indarto, K. (2020). Small carnivore records from Meru Betiri National Park, East Java. Small Carnivore Conservation, 58, e58002. [PDF]\n\n\n\nPurbahapsari, A. F., Hernowo, J.B. and Prasetyo, L.B., (2015). Kesesuaian Habitat Elang Ular Bido (Spilornis cheela LATHAM, 1790) di Koridor Halimun Salak. Jurnal Penelitian Hutan Dan Konservasi Alam, 1790, pp.151-163. [PDF]"
+  },
+  {
+    "objectID": "portfolio/index.html#section",
+    "href": "portfolio/index.html#section",
+    "title": "Portfolio",
+    "section": "",
+    "text": "Spencer, K.L., Deere, N.J., Aini, M., Avriandy, R., Campbell-Smith, G., Cheyne, S.M., Gaveau, D.L., Humle, T., Hutabarat, J., Loken, B. and Macdonald, D.W., (2023). Implications of large-scale infrastructure development for biodiversity in Indonesian Borneo. Science of the Total Environment, 866, p.161075. [PDF]"
+  },
+  {
+    "objectID": "portfolio/index.html#section-1",
+    "href": "portfolio/index.html#section-1",
+    "title": "Portfolio",
+    "section": "",
+    "text": "Purbahapsari, A. F., & Batoarung, I. B. (2022). Geospatial Artificial Intelligence for Early Detection of Forest and Land Fires. KnE Social Sciences, 7(9), 312–327. https://doi.org/10.18502/kss.v7i9.10947.[PDF]\nSibarani, M.C., Albert, W.R., Ario, A., Ariyanto, T., Avriandy, R., Dinata, Y., Kharis, T., Kiswayadi, D., Nopandry, B., Novarino, W. and Radinal, 2022. Sumatra-wide assessment of spatiotemporal niche partitioning among small carnivore species. Mammalian Biology, 102(5-6), pp.2019-2032."
+  },
+  {
+    "objectID": "portfolio/index.html#section-2",
+    "href": "portfolio/index.html#section-2",
+    "title": "Portfolio",
+    "section": "",
+    "text": "Avriandy, R., Pinondang, I. M., Rostro-García, S., Kamler, J. F., Gunaryadi, D., Kholiq, N., & Indarto, K. (2020). Small carnivore records from Meru Betiri National Park, East Java. Small Carnivore Conservation, 58, e58002. [PDF]"
+  },
+  {
+    "objectID": "portfolio/index.html#section-3",
+    "href": "portfolio/index.html#section-3",
+    "title": "Portfolio",
+    "section": "",
+    "text": "Purbahapsari, A. F., Hernowo, J.B. and Prasetyo, L.B., (2015). Kesesuaian Habitat Elang Ular Bido (Spilornis cheela LATHAM, 1790) di Koridor Halimun Salak. Jurnal Penelitian Hutan Dan Konservasi Alam, 1790, pp.151-163. [PDF]"
+  },
+  {
+    "objectID": "portfolio/index.html#section-4",
+    "href": "portfolio/index.html#section-4",
+    "title": "Portfolio",
+    "section": "2018",
+    "text": "2018\nPinondang, I.M.R., Ariyanto, T., Lubis, M.I, Kheng, V., Surahmat, F., Suryometaram, S., Widodo, F.A., Avriandy, R. (2018). Protokol Survei Okupansi Harimau Sumatera, Direktorat Konservasi Keanekaragaman Hayati, DITJEN KSDAE-KLHK. Jakarta. [PDF]"
+  }
+]

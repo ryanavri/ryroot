@@ -1,0 +1,28 @@
+---
+title: "Gallery"
+---
+
+# Cycling
+
+## Mapay Kaluhur
+
+{{< video https://www.youtube.com/watch?v=XDm9x4CcjwI&t=74s
+    title='Cycling to Curug Nangka' 
+>}}
+
+------------------------------------------------------------------------
+
+# Trekking
+## Gunung Kencana
+
+{{< video https://www.youtube.com/watch?v=6SLz7ipog-s
+    title='Trekking Gunung Kencana' 
+>}}
+
+----
+
+## Trekking Batanta & Salawati
+
+{{< video https://www.youtube.com/watch?v=v9jLSJAmW_s
+    title='Ekplorasi Batanta & Salawati' 
+>}}
