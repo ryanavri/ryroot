@@ -1,0 +1,31 @@
+---
+title: "Portfolio"
+---
+
+# Journal articles
+
+## 2023
+
+Spencer, K.L., Deere, N.J., Aini, M., **Avriandy, R**., Campbell-Smith, G., Cheyne, S.M., Gaveau, D.L., Humle, T., Hutabarat, J., Loken, B. and Macdonald, D.W., (2023). Implications of large-scale infrastructure development for biodiversity in Indonesian Borneo. Science of the Total Environment, 866, p.161075. <a href='1-s2.0-S0048969722081785-main.pdf'>\[PDF\]</a>
+
+## 2022
+
+**Purbahapsari, A. F**., & Batoarung, I. B. (2022). Geospatial Artificial Intelligence for Early Detection of Forest and Land Fires. KnE Social Sciences, 7(9), 312--327. https://doi.org/10.18502/kss.v7i9.10947.<a href='Icogpass_20220520.pdf'>\[PDF\]</a>
+
+Sibarani, M.C., Albert, W.R., Ario, A., Ariyanto, T., **Avriandy, R**., Dinata, Y., Kharis, T., Kiswayadi, D., Nopandry, B., Novarino, W. and Radinal, 2022. Sumatra-wide assessment of spatiotemporal niche partitioning among small carnivore species. Mammalian Biology, 102(5-6), pp.2019-2032.
+
+## 2020
+
+**Avriandy, R**., Pinondang, I. M., Rostro-García, S., Kamler, J. F., Gunaryadi, D., Kholiq, N., & Indarto, K. (2020). Small carnivore records from Meru Betiri National Park, East Java. Small Carnivore Conservation, 58, e58002. <a href='SCC2020-JavanSmCarnivores.pdf'>\[PDF\]</a>
+
+## 2015
+
+**Purbahapsari, A. F**., Hernowo, J.B. and Prasetyo, L.B., (2015). Kesesuaian Habitat Elang Ular Bido (Spilornis cheela LATHAM, 1790) di Koridor Halimun Salak. Jurnal Penelitian Hutan Dan Konservasi Alam, 1790, pp.151-163. <a href='1363-3234-2-PB.pdf'>\[PDF\]</a>
+
+------------------------------------------------------------------------
+
+# Books
+
+## 2018
+
+Pinondang, I.M.R., Ariyanto, T., Lubis, M.I, Kheng, V., Surahmat, F., Suryometaram, S., Widodo, F.A., **Avriandy, R**. (2018). Protokol Survei Okupansi Harimau Sumatera, Direktorat Konservasi Keanekaragaman Hayati, DITJEN KSDAE-KLHK. Jakarta. <a href='BukuProtokolSurveiOkupansi_V13_TTD.pdf'>\[PDF\]</a>
