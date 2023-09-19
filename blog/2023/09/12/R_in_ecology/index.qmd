@@ -3,7 +3,7 @@ title: "Menggunakan R dalam kajian ekologi"
 description: ""
 author:
   - name: Ryan Avriandy
-date: "2023-09-01"
+date: "2023-09-12"
 categories:
   - r
   - statistics
@@ -65,6 +65,6 @@ Selain karena R merupakan program yang gratis, kelebihan lain yang ditawarkan ad
 
 1.  ***Steep learning curve***; Mempelajari R untuk pertama kali biasanya agak sulit untuk seseorang yang belum pernah mempelajari bahasa pemrograman sama sekali, bahkan ada istilah *R makes easy things hard, and hard things easy.*
 
-# Pembahasan
+# Penutup
 
-Penggunaan R dalam ekologi telah berkembang pesat dalam beberapa tahun terakhir karena transparansi, reproduksibilitas, dan kekuatan analisisnya. Meskipun ada kurva pembelajaran yang curam, manfaat jangka panjangnya dalam penelitian ekologi membuatnya menjadi alat yang sangat berharga bagi praktisi ekologi
+Penggunaan R dalam ekologi telah berkembang pesat dalam beberapa tahun terakhir karena transparansi, reproduksibilitas, dan kekuatan analisisnya. Meskipun ada kurva pembelajaran yang curam, manfaat jangka panjangnya dalam penelitian ekologi membuatnya menjadi alat yang berharga bagi praktisi ekologi

@@ -1,0 +1,59 @@
+---
+title: "Diploendozoochory"
+description: "Bagaimana tanaman menumpang di kotoran hewan"
+author:
+  - name: Ryan Avriandy
+date: "2023-09-18"
+categories:
+  - ecology
+  - biodiversity 
+  - natural history
+  - wildlife biology
+---
+
+# Penyebaran benih
+
+Ketika tanaman menghasilkan benih (Biji). Biji tersebut perlu menyebar jauh dari induknya. Jika biji tersebut hanya jatuh di dekat tanaman induknya, mereka akan bersaing untuk nutrisi dan cahaya untuk bertumbuh. Dengan adanya mekanisme penyebaran biji, memungkinkan mereka tumbuh dengan lebih sedikit persaingan dari tanaman lain
+
+## *Air nomad*
+
+Ada beberapa mekanisme penyebaran biji, salah satunya yang paling umum adalah melalui bantuan udara, fenomena ini disebut dengan "**Anemochory**", seperti tumbuhan dandelion. Karena bobotnya yang ringan, biji yang tertiup angin ini bisa terbawa jauh dari tanaman induknya ketika ada angin kencang yang berhembus
+
+![Benih dandelion terhembus angin (\@marisa_martin)](dandelion.gif){fig-align="center"}
+
+## *Kaboom!!*
+
+Mekanisme lainnya adalah "**Ballochory**", dimana biji diletupkan dengan kuat melalui pelepasan eksplosif dari buah atau cangkangnya. Sewaktu kecil, mungkin kira sering menemukan tanaman ini disekitar sungai atau *comberan* yang biasa disebut *peletekan* (*Ruellia tuberosa*). Cangkang dari tanaman tersebut akan meletup dan menyebarkan biji didalamnya ketika kita taruh di air.
+
+Namun, contoh yang cukup ekstrim dari mekanisme ini adalah tanaman *squirting cucumber* (*Ecballium elaterium*), dimana ketika buahnya matang, ia akan menyemburkan bijinya secara beruntun dan cepat seperti karakter [Gatling Pea](https://plantsvszombies.fandom.com/wiki/Gatling_Pea) di game [zombie vs plants](https://plantsvszombies.fandom.com/wiki/Main_Page).
+
+![Squiring cucumber (© Smithsonian channel)](sqcucumber.gif){fig-align="center"}
+
+## *The poop rider*
+
+Cara lain yang umum diketahui adalah melalui hewan yang disebut dengan "**Endozoochory**", di mana hewan menyebarluaskan biji melalui konsumsi buah-buahan. Biji yang terkandung dalam buah melewati saluran pencernaan untuk kemudian diekskresikan atau dimuntahkan dan disebarluaskan. Di hutan tropis mekanisme ini memerakan peranan sangat penting karena lebih dari 75% [@howe1982ecology] tanaman berbuah disebarkan oleh hewan-hewan vertebrata seperti tapir, gajah, berbagai jenis primata dan burung-burung rangkong.
+
+Mekanisme ini juga memainkan peran penting dalam keutuhan dan kesehatan ekosistem hutan karena dalam beberapa kasus, mamalia besar dapat mengonsumsi buah dalam jumlah banyak dan tersimpan dalam sistem pencernaan selama beberapa hari yang kemudian terbawa hingga beberapa kilometer dari tanaman induknya [@cousens2010towards; @poulsen2021long; @rubalcava2021seed].
+
+Dalam beberapa kasus, terkadang biji ini tidak hanya melalui satu sistem pencernaan melainkan **dua kali** sistem pencernaan. Peristiwa ini terjadi ketika hewan predator memakan hewan yang memakan buah yang mengandung biji. Kamu dapat membayangkan peristiwa ini seperti [boneka rusia](https://en.wikipedia.org/wiki/Matryoshka_doll). Mekanisme ini disebut dengan "**Diploendozoochory"**.
+
+![Ilustrasi matryoshka doll (\@cecymeade)](rusiandoll.gif){fig-align="center"}
+
+# Diploendozoochory
+
+**Diploendozoochory** adalah proses kompleks yang melibatkan partisipasi dua atau lebih agen penyebaran secara berurutan (mangsa dan pemangsa). Secara khusus, jenis penyebaran ini terjadi ketika pemangsa karnivora mengonsumsi hewan penyebar utama atau pemakan buah, bersama dengan biji-biji yang ada dalam saluran pencernaan mangsa, dan kemudian mengendapkan biji-biji tersebut bersama dengan sisa-sisa mangsa tersebut melalui feses atau muntahan sisa makanan [@nogales2007secondary; @nogales2012evidence]. Beberapa contohnya adalah;
+
+-   Kucing besar Cougar (*Puma concolor*) di Argentina yang menyebarkan banyak sekali biji-bijian dari salah satu mangsanya yaitu sejenis burung dara (*Zenaida auriculata).* Dalam studi yang dilakukan @sarasola2016hypercarnivorous menemukan bahwa sebanyak rerata 257.5 biji ditemukan disetiap feses Cougar.
+
+-   Burung pemangsa yaitu sejenis burung alap-alap (*Falco tinnunculus*) dan burung cendet (*Lanius meridionalis*) di [Kepulauan Canary](https://maps.app.goo.gl/wU9gfsMFYceWA3658) yang menyebarkan biji-bijian melalui pemangsaan sejenis kadal pemakan buah (*Gallotia atlantica*). Studi yang dilakukan @nogales2007secondary menyatakan bahwa mekanisme ini berpotensi membantu biji-bijian tersebut dapat tersebar dan mengkoloni pulau-pulau disekitarnya karena dibawa oleh burung-burung pemangsa tersebut.
+
+-   Ular derik, studi yang dilakukan oleh @reiserer2018seed menemukan bahwa spesimen yang mereka periksa dari tiga jenis ular derik (*Crotalus cerastes, C. scutulatus* dan *C. pyrrhus*) menemukan beberapa jenis biji-bijian di saluran pencernaannya yang berasal dari pemangsaan tikus (*Dipodomys* sp.) pemakan biji.
+
+Studi terkini oleh @hamalainen2017ecological, mengkaji secara komprehensif literatur mengenai diploendozoochory dan menemukan bahwa mekanisme ini ternyata lebih umum dari yang sebelumnya diduga dan secara positif memberikan keuntungan dalam penyebaran tanaman daripada endozoochory atau *single-phase dispersal*
+
+Secara umum hasil kajian tersebut berkesimpulan bahwa
+
+-   Biji mendapatkan tingkat perkecambahan yang lebih tinggi setelah melewati saluran pencernaan karena pencernaan menghilangkan lapisan fisik atau senyawa kimia yang menghambat perkecambahan biji. Namun menjaga keutuhan biji dari sistem pencernaan oleh hewan-hewan mangsanya atau hewan herbivor
+-   Menumpang dalam saluran pencernaan hewan predator dapat membawa mereka ke jarak yang secara umum lebih jauh bahkan melintasi berbagai habitat. Tersebarnya biji-biji ini lebih jauh dari tanaman induk berarti biji-biji tersebut dibawa ke lingkungan dengan persaingan yang lebih sedikit dengan tanaman induk, kondisi cahaya yang lebih baik, serta peluang untuk mengkolonisasi habitat-habitat baru.
+
+Di Indonesia, peristiwa ini belum banyak dikaji, kucing-kucing besar seperti harimau (*Panthera tigris*) dan macan tutul (*Panthera pardus*) juga berpotensi dapat membantu penyebaran biji-bijian hutan dengan cara tersebut. Karena seperti yang diketahui mangsa utama kedua kucing besar tersebut adalah hewan herbivora yang memakan buah-buahan dan keduanya memiliki daerah jelajah yang sangat luas. Siapa tahu mungkin kamu akan menjadi salah satu pionir penelitian pada bidang ini di Indonesia?
