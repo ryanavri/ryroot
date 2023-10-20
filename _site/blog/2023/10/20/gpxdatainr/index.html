@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Ryroot">
+<meta name="description" content="Wildlife ecologist from the rain city">
+<title>Ryroot</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="../../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../../">
+<script src="../../../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Tidak ada hasil",
+    "search-matching-documents-text": "dokumen cocok",
+    "search-copy-link-title": "Salin tautan untuk mencari",
+    "search-hide-matches-text": "Sembunyikan kecocokan lainnya",
+    "search-more-match-text": "kecocokan lainnya di dokumen ini",
+    "search-more-matches-text": "kecocokan lainnya di dokumen ini",
+    "search-clear-button-title": "Hapus",
+    "search-detached-cancel-button-title": "Batal",
+    "search-submit-button-title": "Kirim"
+  }
+}</script><style>
+
+      .quarto-title-block .quarto-title-banner {
+        background: #212529;
+      }
+</style>
+<script src="../../../../../site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script><script src="../../../../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><link href="../../../../../site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="../../../../../site_libs/leaflet-1.3.1/leaflet.js"></script><link href="../../../../../site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="../../../../../site_libs/proj4-2.6.2/proj4.min.js"></script><script src="../../../../../site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="../../../../../site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="../../../../../site_libs/leaflet-binding-2.2.0/leaflet.js"></script>
+</head>
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../../../../index.html">
+    <span class="navbar-title">Ryroot</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alihkan navigasi" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../../../../index.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../blog/index.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../portfolio/index.html" rel="" target="">
+ <span class="menu-text">Portfolios</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../gallery/index.html" rel="" target="">
+ <span class="menu-text">Gallery</span></a>
+  </li>  
+</ul>
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ryanavri" rel="me" target=""><i class="bi bi-github" role="img" aria-label="github">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+<div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default blog-post page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <div class="quarto-title-block"><div><h1 class="title">Membaca Data Jalur GPS di R</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Kode</button></div></div>
+                  <div>
+        <div class="description">
+          Visualisasi dan pemetaan jalur menggunakan R
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">r</div>
+                <div class="quarto-category">gis</div>
+                <div class="quarto-category">leaflet</div>
+                <div class="quarto-category">data-viz</div>
+                <div class="quarto-category">strava</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Penulis</div>
+      <div class="quarto-title-meta-contents">
+               <p>Ryan Avriandy </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Diterbitkan</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">Friday, October 20, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Contents</h2>
+   
+  <ul>
+<li><a href="#data-yang-diperlukan" id="toc-data-yang-diperlukan" class="nav-link active" data-scroll-target="#data-yang-diperlukan">Data yang diperlukan</a></li>
+  <li><a href="#membaca-data-gpx" id="toc-membaca-data-gpx" class="nav-link" data-scroll-target="#membaca-data-gpx">Membaca data GPX</a></li>
+  <li><a href="#membuat-plot-elevasi-dan-tempo" id="toc-membuat-plot-elevasi-dan-tempo" class="nav-link" data-scroll-target="#membuat-plot-elevasi-dan-tempo">Membuat plot elevasi dan tempo</a></li>
+  <li><a href="#plot-rute-tersebut-pada-peta" id="toc-plot-rute-tersebut-pada-peta" class="nav-link" data-scroll-target="#plot-rute-tersebut-pada-peta">Plot rute tersebut pada peta</a></li>
+  <li><a href="#penutup" id="toc-penutup" class="nav-link" data-scroll-target="#penutup">Penutup</a></li>
+  </ul></nav>
+</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content"><p>Banyak orang saat ini menggunakan Strava untuk berbagi pencapaian mereka ketika melakukan aktivitas olahraga. Dengan Strava, kamu dapat dengan mudah memantau dan berbagi rute saat <em>hiking</em>, berlari, bersepeda, berkuda hingga mengemudi. Selain itu, kamu bisa melihat rincian seperti jarak, waktu, dan kecepatan rata-rata. Yang lebih menarik, Strava memungkinkan kamu berinteraksi dengan komunitas olahraga, sehingga kamu dapat memotivasi teman-teman atau mengikuti pencapaian mereka.</p>
+<p>Sebagai orang yang juga kompetitif, saya juga menggunakan Strava untuk dapat mengejar pencapaian teman-teman saya. Dalam blog ini saya akan berbagi cara untuk meniru visualisasi data yang biasa dihasilkan oleh strava menggunakan R.</p>
+<section id="data-yang-diperlukan" class="level1"><h1>Data yang diperlukan</h1>
+<p>Dalam simulasi ini, kita akan menggunakan rute GPX yang dihasilkan dari <em>trekking</em> di <a href="https://youtu.be/WosdtRpf-0M?si=vvC1yyssGdwriphN">Bukit Paniisan.</a> Unduh data tersebut melalui tautan berikut ini; <a href="https://github.com/ryanavri/ryroot_data/blob/main/gpxdatainr/Ngebukit.gpx">data_trekking_gpx</a>. Lalu unduh paket yang diperlukan dalam daftar paket dibawah ini</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://www.omegahat.net/RSXML/">XML</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://lubridate.tidyverse.org">lubridate</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">geosphere</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://wilkelab.org/cowplot/">cowplot</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://rstudio.github.io/leaflet/">leaflet</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/r-spatial/mapview">mapview</a></span><span class="op">)</span></span></code><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="membaca-data-gpx" class="level1"><h1>Membaca data GPX</h1>
+<p>Mengunggah data GPX dan mengambil informasi yang dibutuhkan ke dalam <em>data frame</em></p>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Membaca data gpx</span></span>
+<span><span class="va">gpx_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/XML/man/xmlTreeParse.html">htmlTreeParse</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"Ngebukit.gpx"</span>, useInternalNodes <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Mengakses data kordinat, elevasi dan waktu</span></span>
+<span><span class="va">coords</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/XML/man/getNodeSet.html">xpathSApply</a></span><span class="op">(</span>doc <span class="op">=</span> <span class="va">gpx_data</span>, path <span class="op">=</span> <span class="st">"//trkpt"</span>, fun <span class="op">=</span> <span class="va">xmlAttrs</span><span class="op">)</span></span>
+<span><span class="va">elevation</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/XML/man/getNodeSet.html">xpathSApply</a></span><span class="op">(</span>doc <span class="op">=</span> <span class="va">gpx_data</span>, path <span class="op">=</span> <span class="st">"//trkpt/ele"</span>, fun <span class="op">=</span> <span class="va">xmlValue</span><span class="op">)</span></span>
+<span><span class="va">datetime</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/XML/man/getNodeSet.html">xpathSApply</a></span><span class="op">(</span>doc <span class="op">=</span> <span class="va">gpx_data</span>, path <span class="op">=</span> <span class="st">"//trkpt/time"</span>, fun <span class="op">=</span> <span class="va">xmlValue</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Mengatur ke dalam dataframe</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
+<span>  lon <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="va">coords</span><span class="op">[</span><span class="st">"lon"</span>, <span class="op">]</span><span class="op">)</span>,</span>
+<span>  lat <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="va">coords</span><span class="op">[</span><span class="st">"lat"</span>, <span class="op">]</span><span class="op">)</span>,</span>
+<span>  elevation <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="va">elevation</span><span class="op">)</span>,</span>
+<span>  datetime <span class="op">=</span> <span class="fu"><a href="https://lubridate.tidyverse.org/reference/as_date.html">as_datetime</a></span><span class="op">(</span><span class="va">datetime</span>, tz<span class="op">=</span><span class="st">"Asia/Bangkok"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span></code><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       lon       lat elevation            datetime
+1 106.9304 -6.592982     481.4 2023-09-03 08:48:20
+2 106.9304 -6.592972     481.3 2023-09-03 08:48:21
+3 106.9304 -6.592963     481.3 2023-09-03 08:48:22
+4 106.9304 -6.592954     481.3 2023-09-03 08:48:23
+5 106.9304 -6.592945     481.3 2023-09-03 08:48:24
+6 106.9304 -6.592936     481.3 2023-09-03 08:48:25</code></pre>
+</div>
+</div>
+<p>Kemudian, kita akan mengondisikan data tersebut untuk mendapatkan informasi jarak <em>trajectories</em> (pergerakan dari satu titik GPS ke titik berikutnya), dan tempo (waktu yang dibutuhkan untuk mencapai jarak tempuh sejauh 1 km)</p>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Menghitung jarak (dalam meter) antara dua titik GPS berturut-turut menggunakan formula Haversine</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> </span>
+<span>  <span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>lat_lead <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/lead-lag.html">lead</a></span><span class="op">(</span><span class="va">lat</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>lon_lead <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/lead-lag.html">lead</a></span><span class="op">(</span><span class="va">lon</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rowwise.html">rowwise</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>dist_to_lead_m <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/geosphere/man/distm.html">distm</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">lon</span>, <span class="va">lat</span><span class="op">)</span>, </span>
+<span>                                <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">lon_lead</span>, <span class="va">lat_lead</span><span class="op">)</span>, </span>
+<span>                                fun <span class="op">=</span> <span class="va">distHaversine</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span>,<span class="fl">1</span><span class="op">]</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Menghitung selisih waktu (dalam detik) antara titik GPS berturut-turut</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> </span>
+<span>  <span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>datetime_lead <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/lead-lag.html">lead</a></span><span class="op">(</span><span class="va">datetime</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>ts_diff_s <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/difftime.html">difftime</a></span><span class="op">(</span><span class="va">datetime_lead</span>, </span>
+<span>                                         <span class="va">datetime</span>, units <span class="op">=</span> <span class="st">"secs"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> </span>
+<span></span>
+<span><span class="co"># Menghitung kecepatan dalam meter per detik dan kilometer per jam</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> </span>
+<span>  <span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>speed_m_per_sec <span class="op">=</span> <span class="va">dist_to_lead_m</span> <span class="op">/</span> <span class="va">ts_diff_s</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>speed_km_per_h <span class="op">=</span> <span class="va">speed_m_per_sec</span> <span class="op">*</span> <span class="fl">3.6</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Menghitung jarak akumulasi</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span></span>
+<span>  <span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>distance <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/cumsum.html">cumsum</a></span><span class="op">(</span><span class="va">dist_to_lead_m</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Menghapus nilai yang hilang (NAs) dan jarak 0</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html">na.omit</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="va">df</span><span class="op">[</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/grep.html">grepl</a></span><span class="op">(</span><span class="st">"0"</span>, <span class="va">df</span><span class="op">$</span><span class="va">dist_to_lead_m</span><span class="op">)</span>,<span class="op">]</span></span>
+<span></span>
+<span><span class="co"># Menghitung tempo dalam menit per kilometer</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> </span>
+<span>  <span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>pace_minperkm <span class="op">=</span> <span class="op">(</span><span class="op">(</span><span class="va">ts_diff_s</span><span class="op">/</span><span class="fl">60</span><span class="op">)</span> <span class="op">/</span><span class="op">(</span><span class="va">dist_to_lead_m</span><span class="op">/</span><span class="fl">1000</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> </span>
+<span></span>
+<span><span class="co"># Menghapus beberapa kolom yang tidak akan digunakan lagi</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> </span>
+<span>  <span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">lat_lead</span>, <span class="va">lon_lead</span>, </span>
+<span>            <span class="va">datetime_lead</span>, <span class="va">ts_diff_s</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Menampilkan data yang sudah dikelola</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       lon       lat elevation            datetime dist_to_lead_m
+1 106.9304 -6.592958     481.2 2023-09-03 08:48:27       2.728283
+2 106.9304 -6.592934     481.2 2023-09-03 08:48:28       1.684376
+3 106.9304 -6.592847     481.0 2023-09-03 08:48:34       1.662734
+4 106.9305 -6.592823     480.9 2023-09-03 08:48:37       1.335520
+5 106.9305 -6.592811     480.8 2023-09-03 08:48:46       1.882918
+6 106.9307 -6.592979     480.3 2023-09-03 08:49:01       1.749643
+  speed_m_per_sec speed_km_per_h distance pace_minperkm
+1        2.728283       9.821817 11.95751      6.108849
+2        1.684376       6.063752 13.64189      9.894863
+3        1.662734       5.985842 23.87679     10.023653
+4        1.335520       4.807871 27.48938     12.479537
+5        1.882918       6.778506 31.36685      8.851508
+6        1.749643       6.298716 62.28717      9.525751</code></pre>
+</div>
+</div>
+</section><section id="membuat-plot-elevasi-dan-tempo" class="level1"><h1>Membuat plot elevasi dan tempo</h1>
+<p>Setelah itu, kita bisa membuat grafik yang menggambarkan plot elevasi sepanjang jarak tempuh dan tempo.</p>
+<div class="cell">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Plot Elevasi</span></span>
+<span><span class="va">plot_elevation</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">distance</span><span class="op">/</span><span class="fl">1000</span>, y <span class="op">=</span> <span class="va">elevation</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span>color<span class="op">=</span><span class="st">"green"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_ribbon.html">geom_ribbon</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>ymin <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">elevation</span><span class="op">)</span>, ymax <span class="op">=</span> <span class="va">elevation</span><span class="op">)</span>, </span>
+<span>                fill <span class="op">=</span> <span class="st">"gray"</span>, alpha <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span><span class="op">(</span><span class="st">"Elevation (m)"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span><span class="op">(</span><span class="st">"Distance (km)"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>axis.title.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>          axis.text.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>  </span>
+<span>  </span>
+<span><span class="co"># Plot Tempo</span></span>
+<span><span class="va">plot_pace</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">pace_minperkm</span> <span class="op">&lt;</span> <span class="fl">20</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">distance</span><span class="op">/</span><span class="fl">1000</span>, y <span class="op">=</span> <span class="va">pace_minperkm</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">"blue"</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>y <span class="op">=</span> <span class="st">"Pace (min/km)"</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span><span class="op">(</span><span class="st">"Distance (km)"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_reverse</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span></span>
+<span>  </span>
+<span><span class="co"># Menggabungkan kedua plot menggunakan plot_grid dari cowplot</span></span>
+<span><span class="va">combined_plot</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://wilkelab.org/cowplot/reference/plot_grid.html">plot_grid</a></span><span class="op">(</span><span class="va">plot_elevation</span>, <span class="va">plot_pace</span>, ncol <span class="op">=</span> <span class="fl">1</span>, rel_heights <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
+<span>  </span>
+<span><span class="co"># Menampilkan plot yang digabungkan</span></span>
+<span><span class="va">combined_plot</span></span></code><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/plot_gpstrack-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section><section id="plot-rute-tersebut-pada-peta" class="level1"><h1>Plot rute tersebut pada peta</h1>
+<p>Lalu kita akan menambahkan anotasi penanda jarak tempuh dalam jalur tersebut di setiap 1 km, lalu menampilkan rute trekking tersebut pada peta.</p>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Menambahkan markah jarak pada peta</span></span>
+<span><span class="va">df_dist_marks</span> <span class="op">&lt;-</span> </span>
+<span>  <span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>dist_m_cumsum_km_floor <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">floor</a></span><span class="op">(</span><span class="va">distance</span> <span class="op">/</span> <span class="fl">1000</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">dist_m_cumsum_km_floor</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/row_number.html">row_number</a></span><span class="op">(</span><span class="op">)</span> <span class="op">==</span> <span class="fl">1</span>, <span class="va">dist_m_cumsum_km_floor</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">)</span> </span></code><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Menampilkan jalur trekking pada peta</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/leaflet.html">leaflet</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-layers.html">addTiles</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-layers.html">addPolylines</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">df</span>, lat <span class="op">=</span> <span class="op">~</span><span class="va">lat</span>, lng <span class="op">=</span> <span class="op">~</span><span class="va">lon</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-layers.html">addMarkers</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">df_dist_marks</span>, lat <span class="op">=</span> <span class="op">~</span><span class="va">lat</span>, lng <span class="op">=</span> <span class="op">~</span><span class="va">lon</span>, label <span class="op">=</span>  <span class="op">~</span><span class="va">dist_m_cumsum_km_floor</span>, </span>
+<span>             labelOptions <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-options.html">labelOptions</a></span><span class="op">(</span>noHide <span class="op">=</span> <span class="cn">T</span>, direction <span class="op">=</span> <span class="st">'top'</span>, textOnly <span class="op">=</span> <span class="cn">T</span><span class="op">)</span><span class="op">)</span></span></code><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-7dd4a25c0b103d73e8ad" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-7dd4a25c0b103d73e8ad">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addPolylines","args":[[[[{"lng":[106.930406,106.930411,106.930438,106.930464,106.930484,106.930703,106.930733,106.930765,106.930771,106.930784,106.930789,106.93081,106.930828,106.930849,106.930875,106.930952,106.931267,106.931218,106.931236,106.931234,106.931213,106.931208,106.931209,106.931314,106.931323,106.93133,106.931261,106.931256,106.931281,106.93129,106.931314,106.931318,106.931325,106.931329,106.931336,106.931423,106.93143,106.931471,106.931426,106.931335,106.931332,106.931324,106.931276,106.931285,106.931285,106.931286,106.931185,106.931134,106.931075,106.931047,106.931039,106.930964,106.930942,106.930944,106.930945,106.930946,106.930938,106.930905,106.930891,106.930883,106.930851,106.930844,106.930841,106.930851,106.930879,106.930958,106.930981,106.930991,106.931013,106.931073,106.931064,106.931023,106.93095,106.930855,106.930823,106.930811,106.930766,106.930741,106.930781,106.930782,106.930787,106.930785,106.930774,106.93073,106.930706,106.930719,106.930701,106.930633,106.930545,106.93044,106.930432,106.930347,106.930351,106.930341,106.930319,106.930287,106.93018,106.930171,106.930142,106.930128,106.930094,106.930049,106.930016,106.93,106.929981,106.929897,106.929831,106.929825,106.929826,106.929772,106.92977,106.929761,106.92976,106.92976,106.929761,106.929741,106.929703,106.929715,106.929722,106.929703,106.929647,106.929618,106.929612,106.929607,106.929532,106.929522,106.929498,106.929474,106.929366,106.929345,106.929296,106.92925,106.929249,106.929246,106.929238,106.92922,106.929204,106.929202,106.929199,106.929195,106.929174,106.929141,106.929096,106.929088,106.929087,106.929086,106.929038,106.928967,106.928962,106.928945,106.928926,106.928804,106.928582,106.928263,106.928233,106.92811,106.927923,106.927832,106.927802,106.927718,106.927417,106.927378,106.927318,106.927279,106.927256,106.92722,106.927192,106.927185,106.927151,106.927119,106.927108,106.927035,106.926917,106.926822,106.926732,106.926578,106.926565,106.92653,106.926518,106.926464,106.926455,106.926251,106.92611,106.926037,106.925951,106.925932,106.925868,106.925889,106.925922,106.926014,106.926058,106.926065,106.926073,106.926082,106.926091,106.926112,106.926126,106.926163,106.926266,106.926279,106.92634,106.926417,106.92655,106.926574,106.926611,106.926668,106.92667,106.926674,106.926676,106.926675,106.926682,106.926691,106.926724,106.926753,106.926908,106.926941,106.926997,106.927012,106.92706,106.92707,106.92711,106.927153,106.927164,106.92718,106.927202,106.927232,106.92727,106.927281,106.927282,106.927301,106.927322,106.927384,106.927396,106.927404,106.927418,106.927599,106.927613,106.927686,106.927703,106.927718,106.927764,106.927791,106.927822,106.927844,106.927892,106.927915,106.927926,106.927946,106.928009,106.928023,106.928026,106.928044,106.928054,106.928061,106.928071,106.928131,106.928221,106.928239,106.928248,106.928262,106.928282,106.92831,106.928484,106.928588,106.928631,106.928634,106.928716,106.928741,106.928759,106.928808,106.928838,106.928851,106.928905,106.928918,106.928941,106.928964,106.928959,106.928957,106.928964,106.929028,106.929036,106.929078,106.929073,106.929083,106.929158,106.929165,106.929209,106.929208,106.929265,106.92927,106.929267,106.929265,106.929297,106.9294,106.929491,106.92949,106.929504,106.929514,106.929542,106.929584,106.929593,106.929629,106.929636,106.929639,106.92964,106.929669,106.929733,106.929736,106.929739,106.929742,106.929747,106.929763,106.929757,106.929758,106.929758,106.929757,106.929757,106.929817,106.929825,106.929837,106.929828,106.929825,106.929856,106.930062,106.930073,106.9301,106.930137,106.930187,106.930244,106.930262,106.930282,106.930349,106.930358,106.930357,106.930353,106.930345,106.930335,106.930337,106.930347,106.930349,106.930388,106.930409,106.930516,106.93054,106.930565,106.930606,106.930702,106.930783,106.930799,106.930794,106.930792,106.93078,106.930778,106.930773,106.930771,106.930775,106.930778,106.930783,106.930788,106.93079,106.930792,106.930817,106.930827,106.930847,106.930951,106.931001,106.930992,106.930992,106.931033,106.931071,106.931049,106.931045,106.931036,106.931057,106.931021,106.930939,106.930929,106.930861,106.930858,106.930857,106.930858,106.930858,106.930859,106.930908,106.930931,106.930936,106.93094,106.930948,106.930969,106.930975,106.930986,106.931016,106.93108,106.931099,106.931099,106.931104,106.931108,106.931121,106.931129,106.931238,106.931261,106.931281,106.931289,106.931311,106.931329,106.931334,106.931329,106.931335,106.93135,106.931353,106.931351,106.931346,106.93136,106.931426,106.93147,106.931495,106.93147,106.931455,106.931435,106.931409,106.931392,106.93137,106.931346,106.931279,106.931266,106.931232,106.931226,106.931333,106.931371,106.931351,106.931346,106.931345,106.931342,106.931313,106.93131,106.931306,106.931303,106.931288,106.93126,106.931247,106.931242,106.931255,106.931255,106.931306,106.931264,106.931211,106.931208,106.931202,106.931203,106.931216,106.931223,106.931257,106.931256,106.931217,106.93122,106.931207,106.931147,106.931119,106.931106,106.931038,106.93101,106.930973,106.930941,106.930919,106.930893,106.930888,106.930888,106.930889,106.930883,106.930832,106.930822,106.930738,106.930717,106.930708,106.930699,106.930648,106.930459,106.930462,106.930447,106.930446,106.930446,106.930453],"lat":[-6.592958,-6.592934,-6.592847,-6.592823,-6.592811,-6.592979,-6.592991,-6.59306,-6.593071,-6.593103,-6.593115,-6.593149,-6.593181,-6.593248,-6.593309,-6.593423,-6.593599,-6.59373,-6.593978,-6.593993,-6.594037,-6.594083,-6.594124,-6.594325,-6.594377,-6.594462,-6.594711,-6.594782,-6.59491,-6.594959,-6.595045,-6.595109,-6.595152,-6.595173,-6.595224,-6.59537,-6.595378,-6.595436,-6.595603,-6.595756,-6.595773,-6.595839,-6.595963,-6.596088,-6.596103,-6.596114,-6.596365,-6.596474,-6.59663,-6.596684,-6.596697,-6.59681,-6.596868,-6.596889,-6.596916,-6.596953,-6.596984,-6.597095,-6.597217,-6.597256,-6.597371,-6.5974,-6.597437,-6.597474,-6.597558,-6.597763,-6.597802,-6.597842,-6.598117,-6.598183,-6.598202,-6.598269,-6.598426,-6.598544,-6.598569,-6.598578,-6.598616,-6.598739,-6.598872,-6.598891,-6.598937,-6.598964,-6.59901,-6.599131,-6.599249,-6.59938,-6.599455,-6.599566,-6.599668,-6.599826,-6.599847,-6.600059,-6.600148,-6.600187,-6.600239,-6.600308,-6.600495,-6.60051,-6.600559,-6.600603,-6.600677,-6.600727,-6.600752,-6.600763,-6.600777,-6.600887,-6.601026,-6.601088,-6.601111,-6.60127,-6.601315,-6.60143,-6.601445,-6.601462,-6.601477,-6.601535,-6.601609,-6.601645,-6.601729,-6.601824,-6.601944,-6.602,-6.602011,-6.602022,-6.602115,-6.602127,-6.602179,-6.602313,-6.602439,-6.602503,-6.60261,-6.602709,-6.60272,-6.602737,-6.602791,-6.602836,-6.602879,-6.602908,-6.602987,-6.603002,-6.603061,-6.60313,-6.603198,-6.603296,-6.603307,-6.603403,-6.603483,-6.603551,-6.603563,-6.603927,-6.604033,-6.604221,-6.604599,-6.604708,-6.604729,-6.604941,-6.605241,-6.605372,-6.60552,-6.605576,-6.605612,-6.605622,-6.605663,-6.605715,-6.605765,-6.605833,-6.605872,-6.605882,-6.605984,-6.606026,-6.606035,-6.606106,-6.606186,-6.606251,-6.60637,-6.606594,-6.606601,-6.606623,-6.606626,-6.606671,-6.606678,-6.60675,-6.60671,-6.606639,-6.606589,-6.606573,-6.606525,-6.606559,-6.606598,-6.606634,-6.606668,-6.606676,-6.606685,-6.606694,-6.606703,-6.606722,-6.606737,-6.60677,-6.606758,-6.606752,-6.606727,-6.606701,-6.606623,-6.606611,-6.606591,-6.606572,-6.606561,-6.606539,-6.60651,-6.606466,-6.606455,-6.606444,-6.60641,-6.606376,-6.606194,-6.606181,-6.606148,-6.606134,-6.606091,-6.606083,-6.606052,-6.606016,-6.606006,-6.605988,-6.605901,-6.605867,-6.605837,-6.605803,-6.605793,-6.605728,-6.605701,-6.605636,-6.605617,-6.605609,-6.605601,-6.605598,-6.605598,-6.605607,-6.605611,-6.605614,-6.605609,-6.605594,-6.605524,-6.605409,-6.605296,-6.605261,-6.605259,-6.605248,-6.605171,-6.605152,-6.605129,-6.605048,-6.605022,-6.605009,-6.605,-6.604949,-6.604768,-6.604745,-6.604731,-6.604716,-6.604702,-6.604686,-6.604624,-6.604584,-6.604546,-6.604535,-6.604435,-6.604368,-6.604337,-6.604269,-6.604204,-6.60417,-6.604077,-6.604068,-6.604051,-6.603934,-6.603655,-6.60364,-6.603586,-6.603477,-6.603469,-6.603391,-6.603375,-6.603242,-6.603114,-6.603104,-6.602979,-6.602959,-6.602784,-6.602747,-6.602718,-6.602707,-6.602625,-6.602418,-6.602261,-6.602238,-6.60219,-6.60217,-6.602132,-6.602082,-6.60207,-6.602,-6.601967,-6.601935,-6.601924,-6.601834,-6.601693,-6.601677,-6.60166,-6.601643,-6.601626,-6.601574,-6.601488,-6.601419,-6.601408,-6.601397,-6.601386,-6.601218,-6.601209,-6.601143,-6.601089,-6.601073,-6.600988,-6.600763,-6.600749,-6.600666,-6.600598,-6.600539,-6.600436,-6.6004,-6.600369,-6.600261,-6.600183,-6.60017,-6.600142,-6.600099,-6.600047,-6.60001,-6.599936,-6.599925,-6.599852,-6.599817,-6.599712,-6.599691,-6.599661,-6.5996,-6.599398,-6.599194,-6.598924,-6.598893,-6.598882,-6.598812,-6.598801,-6.598782,-6.598771,-6.59873,-6.59872,-6.598709,-6.598698,-6.598688,-6.598675,-6.598602,-6.598585,-6.598559,-6.598465,-6.598404,-6.598364,-6.598353,-6.598229,-6.598189,-6.598153,-6.598187,-6.597966,-6.597911,-6.59783,-6.597715,-6.59765,-6.597464,-6.597427,-6.597411,-6.597394,-6.597366,-6.597356,-6.597208,-6.597077,-6.597062,-6.597046,-6.596991,-6.596886,-6.596871,-6.596838,-6.596796,-6.596722,-6.596652,-6.596637,-6.596592,-6.596554,-6.596507,-6.596499,-6.596376,-6.59633,-6.596268,-6.596143,-6.596062,-6.595986,-6.595939,-6.595907,-6.595876,-6.595853,-6.595831,-6.59582,-6.595796,-6.59574,-6.595656,-6.595605,-6.595564,-6.59541,-6.59539,-6.595352,-6.595312,-6.595296,-6.595313,-6.595303,-6.595281,-6.595284,-6.595285,-6.595263,-6.595278,-6.595273,-6.595209,-6.595195,-6.595126,-6.595098,-6.595032,-6.595001,-6.594991,-6.59498,-6.594948,-6.594815,-6.594778,-6.594741,-6.594682,-6.594667,-6.594513,-6.594241,-6.594149,-6.59412,-6.594093,-6.594079,-6.594034,-6.594007,-6.593897,-6.593886,-6.593761,-6.593592,-6.593582,-6.593547,-6.593531,-6.593525,-6.593494,-6.593478,-6.593459,-6.593432,-6.593404,-6.59336,-6.593334,-6.593317,-6.593288,-6.593231,-6.593185,-6.593174,-6.593086,-6.593066,-6.593056,-6.593045,-6.592995,-6.59286,-6.592871,-6.592971,-6.592994,-6.593005,-6.593089]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":"#03F","weight":5,"opacity":0.5,"fill":false,"fillColor":"#03F","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[[-6.600495,-6.606634,-6.600183,-6.593231],[106.93018,106.926014,106.930358,106.930883],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["1","2","3","4"],{"interactive":false,"permanent":true,"direction":"top","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":true,"className":"","sticky":true},null]}],"limits":{"lat":[-6.60677,-6.592811],"lng":[106.925868,106.931495]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p>Selanjutnya, kita juga dapat meningkatkan atau memperkaya informasi jalur pergerakan kita dengan menggunakan fungsi dibawah ini untuk membuat rentang elevasi dalam jalur trekking.</p>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Buat fungsi untuk mendapatkan warna berdasarkan rentang elevasi</span></span>
+<span><span class="va">get_color</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">elevation</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="kw">if</span> <span class="op">(</span><span class="va">elevation</span> <span class="op">&lt;</span> <span class="fl">567</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="st">"green"</span><span class="op">)</span></span>
+<span>  <span class="op">}</span></span>
+<span>  <span class="kw">if</span> <span class="op">(</span><span class="va">elevation</span> <span class="op">&lt;</span> <span class="fl">656</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="st">"yellow"</span><span class="op">)</span></span>
+<span>  <span class="op">}</span></span>
+<span>  <span class="kw">if</span> <span class="op">(</span><span class="va">elevation</span> <span class="op">&lt;</span> <span class="fl">757</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="st">"orange"</span><span class="op">)</span></span>
+<span>  <span class="op">}</span></span>
+<span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="st">"red"</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="co"># Buat dataset baru dengan variabel warna</span></span>
+<span><span class="va">df_color</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rowwise.html">rowwise</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>color <span class="op">=</span> <span class="fu">get_color</span><span class="op">(</span><span class="va">elevation</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Tambahkan kolom warna sebelumnya menggunakan fungsi lag dari dplyr</span></span>
+<span><span class="va">df_color</span><span class="op">$</span><span class="va">last_color</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/lead-lag.html">lag</a></span><span class="op">(</span><span class="va">df_color</span><span class="op">$</span><span class="va">color</span><span class="op">)</span></span></code><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Buat peta yang sudah ada gradasi elevasi</span></span>
+<span></span>
+<span><span class="va">map</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/leaflet.html">leaflet</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-layers.html">addTiles</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">color</span> <span class="kw">in</span> <span class="fu"><a href="https://rdrr.io/r/base/levels.html">levels</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">df_color</span><span class="op">$</span><span class="va">color</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">map</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-layers.html">addPolylines</a></span><span class="op">(</span><span class="va">map</span>, lat <span class="op">=</span> <span class="op">~</span><span class="va">lat</span>, lng <span class="op">=</span> <span class="op">~</span><span class="va">lon</span>, data <span class="op">=</span> <span class="va">df_color</span><span class="op">[</span><span class="va">df_color</span><span class="op">$</span><span class="va">color</span> <span class="op">==</span> <span class="va">color</span> <span class="op">|</span> <span class="va">df_color</span><span class="op">$</span><span class="va">last_color</span> <span class="op">==</span> <span class="va">color</span>, <span class="op">]</span>, color <span class="op">=</span> <span class="op">~</span><span class="va">color</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-layers.html">addLabelOnlyMarkers</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">df_dist_marks</span>, lat <span class="op">=</span> <span class="op">~</span><span class="va">lat</span>, lng <span class="op">=</span> <span class="op">~</span><span class="va">lon</span>, label <span class="op">=</span>  <span class="op">~</span><span class="va">dist_m_cumsum_km_floor</span>, </span>
+<span>               labelOptions <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/leaflet/man/map-options.html">labelOptions</a></span><span class="op">(</span>noHide <span class="op">=</span> <span class="cn">T</span>, direction <span class="op">=</span> <span class="st">'top'</span>, textOnly <span class="op">=</span> <span class="cn">T</span>, icon<span class="op">=</span><span class="cn">NULL</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="va">map</span></span></code><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-0c5a8ed920b18d9a240a" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-0c5a8ed920b18d9a240a">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addPolylines","args":[[[[{"lng":[106.930406,106.930411,106.930438,106.930464,106.930484,106.930703,106.930733,106.930765,106.930771,106.930784,106.930789,106.93081,106.930828,106.930849,106.930875,106.930952,106.931267,106.931218,106.931236,106.931234,106.931213,106.931208,106.931209,106.931314,106.931323,106.93133,106.931261,106.931256,106.931281,106.93129,106.931314,106.931318,106.931325,106.931329,106.931336,106.931423,106.93143,106.931471,106.931426,106.931335,106.931332,106.931324,106.931276,106.931285,106.931334,106.931329,106.931335,106.93135,106.931353,106.931351,106.931346,106.93136,106.931426,106.93147,106.931495,106.93147,106.931455,106.931435,106.931409,106.931392,106.93137,106.931346,106.931279,106.931266,106.931232,106.931226,106.931333,106.931371,106.931351,106.931346,106.931345,106.931342,106.931313,106.93131,106.931306,106.931303,106.931288,106.93126,106.931247,106.931242,106.931255,106.931255,106.931306,106.931264,106.931211,106.931208,106.931202,106.931203,106.931216,106.931223,106.931257,106.931256,106.931217,106.93122,106.931207,106.931147,106.931119,106.931106,106.931038,106.93101,106.930973,106.930941,106.930919,106.930893,106.930888,106.930888,106.930889,106.930883,106.930832,106.930822,106.930738,106.930717,106.930708,106.930699,106.930648,106.930459,106.930462,106.930447,106.930446,106.930446,106.930453],"lat":[-6.592958,-6.592934,-6.592847,-6.592823,-6.592811,-6.592979,-6.592991,-6.59306,-6.593071,-6.593103,-6.593115,-6.593149,-6.593181,-6.593248,-6.593309,-6.593423,-6.593599,-6.59373,-6.593978,-6.593993,-6.594037,-6.594083,-6.594124,-6.594325,-6.594377,-6.594462,-6.594711,-6.594782,-6.59491,-6.594959,-6.595045,-6.595109,-6.595152,-6.595173,-6.595224,-6.59537,-6.595378,-6.595436,-6.595603,-6.595756,-6.595773,-6.595839,-6.595963,-6.596088,-6.595939,-6.595907,-6.595876,-6.595853,-6.595831,-6.59582,-6.595796,-6.59574,-6.595656,-6.595605,-6.595564,-6.59541,-6.59539,-6.595352,-6.595312,-6.595296,-6.595313,-6.595303,-6.595281,-6.595284,-6.595285,-6.595263,-6.595278,-6.595273,-6.595209,-6.595195,-6.595126,-6.595098,-6.595032,-6.595001,-6.594991,-6.59498,-6.594948,-6.594815,-6.594778,-6.594741,-6.594682,-6.594667,-6.594513,-6.594241,-6.594149,-6.59412,-6.594093,-6.594079,-6.594034,-6.594007,-6.593897,-6.593886,-6.593761,-6.593592,-6.593582,-6.593547,-6.593531,-6.593525,-6.593494,-6.593478,-6.593459,-6.593432,-6.593404,-6.59336,-6.593334,-6.593317,-6.593288,-6.593231,-6.593185,-6.593174,-6.593086,-6.593066,-6.593056,-6.593045,-6.592995,-6.59286,-6.592871,-6.592971,-6.592994,-6.593005,-6.593089]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":["green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","yellow","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green"],"weight":5,"opacity":0.5,"fill":false,"fillColor":["green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","yellow","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green"],"fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[[-6.600495,-6.606634,-6.600183,-6.593231],[106.93018,106.926014,106.930358,106.930883],{"iconUrl":{"data":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=","index":0},"iconWidth":1,"iconHeight":1},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["1","2","3","4"],{"interactive":false,"permanent":true,"direction":"top","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":true,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[106.93018,106.930171,106.930142,106.930128,106.930094,106.930049,106.930016,106.93,106.929981,106.929897,106.929831,106.929825,106.929826,106.929772,106.92977,106.929761,106.92976,106.92976,106.929761,106.929741,106.929703,106.929715,106.929722,106.929703,106.929647,106.929618,106.929612,106.929607,106.929532,106.929522,106.929498,106.929474,106.929366,106.929345,106.929296,106.92925,106.929249,106.929246,106.929238,106.92922,106.929204,106.929202,106.929199,106.929195,106.929174,106.929141,106.929096,106.929088,106.929087,106.929086,106.929038,106.928967,106.928962,106.928945,106.928926,106.928804,106.928905,106.928918,106.928941,106.928964,106.928959,106.928957,106.928964,106.929028,106.929036,106.929078,106.929073,106.929083,106.929158,106.929165,106.929209,106.929208,106.929265,106.92927,106.929267,106.929265,106.929297,106.9294,106.929491,106.92949,106.929504,106.929514,106.929542,106.929584,106.929593,106.929629,106.929636,106.929639,106.92964,106.929669,106.929733,106.929736,106.929739,106.929742,106.929747,106.929763,106.929757,106.929758,106.929758,106.929757,106.929757,106.929817,106.929825,106.929837,106.929828,106.929825,106.929856,106.930062,106.930073,106.9301,106.930137,106.930187,106.930244,106.930262,106.930282,106.930349,106.930358,106.930357,106.930353],"lat":[-6.600495,-6.60051,-6.600559,-6.600603,-6.600677,-6.600727,-6.600752,-6.600763,-6.600777,-6.600887,-6.601026,-6.601088,-6.601111,-6.60127,-6.601315,-6.60143,-6.601445,-6.601462,-6.601477,-6.601535,-6.601609,-6.601645,-6.601729,-6.601824,-6.601944,-6.602,-6.602011,-6.602022,-6.602115,-6.602127,-6.602179,-6.602313,-6.602439,-6.602503,-6.60261,-6.602709,-6.60272,-6.602737,-6.602791,-6.602836,-6.602879,-6.602908,-6.602987,-6.603002,-6.603061,-6.60313,-6.603198,-6.603296,-6.603307,-6.603403,-6.603483,-6.603551,-6.603563,-6.603927,-6.604033,-6.604221,-6.604077,-6.604068,-6.604051,-6.603934,-6.603655,-6.60364,-6.603586,-6.603477,-6.603469,-6.603391,-6.603375,-6.603242,-6.603114,-6.603104,-6.602979,-6.602959,-6.602784,-6.602747,-6.602718,-6.602707,-6.602625,-6.602418,-6.602261,-6.602238,-6.60219,-6.60217,-6.602132,-6.602082,-6.60207,-6.602,-6.601967,-6.601935,-6.601924,-6.601834,-6.601693,-6.601677,-6.60166,-6.601643,-6.601626,-6.601574,-6.601488,-6.601419,-6.601408,-6.601397,-6.601386,-6.601218,-6.601209,-6.601143,-6.601089,-6.601073,-6.600988,-6.600763,-6.600749,-6.600666,-6.600598,-6.600539,-6.600436,-6.6004,-6.600369,-6.600261,-6.600183,-6.60017,-6.600142]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":[null,"orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","red","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","yellow"],"weight":5,"opacity":0.5,"fill":false,"fillColor":[null,"orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","red","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","yellow"],"fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[[-6.600495,-6.606634,-6.600183,-6.593231],[106.93018,106.926014,106.930358,106.930883],{"iconUrl":{"data":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=","index":0},"iconWidth":1,"iconHeight":1},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["1","2","3","4"],{"interactive":false,"permanent":true,"direction":"top","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":true,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[106.928804,106.928582,106.928263,106.928233,106.92811,106.927923,106.927832,106.927802,106.927718,106.927417,106.927378,106.927318,106.927279,106.927256,106.92722,106.927192,106.927185,106.927151,106.927119,106.927108,106.927035,106.926917,106.926822,106.926732,106.926578,106.926565,106.92653,106.926518,106.926464,106.926455,106.926251,106.92611,106.926037,106.925951,106.925932,106.925868,106.925889,106.925922,106.926014,106.926058,106.926065,106.926073,106.926082,106.926091,106.926112,106.926126,106.926163,106.926266,106.926279,106.92634,106.926417,106.92655,106.926574,106.926611,106.926668,106.92667,106.926674,106.926676,106.926675,106.926682,106.926691,106.926724,106.926753,106.926908,106.926941,106.926997,106.927012,106.92706,106.92707,106.92711,106.927153,106.927164,106.92718,106.927202,106.927232,106.92727,106.927281,106.927282,106.927301,106.927322,106.927384,106.927396,106.927404,106.927418,106.927599,106.927613,106.927686,106.927703,106.927718,106.927764,106.927791,106.927822,106.927844,106.927892,106.927915,106.927926,106.927946,106.928009,106.928023,106.928026,106.928044,106.928054,106.928061,106.928071,106.928131,106.928221,106.928239,106.928248,106.928262,106.928282,106.92831,106.928484,106.928588,106.928631,106.928634,106.928716,106.928741,106.928759,106.928808,106.928838,106.928851,106.928905],"lat":[-6.604221,-6.604599,-6.604708,-6.604729,-6.604941,-6.605241,-6.605372,-6.60552,-6.605576,-6.605612,-6.605622,-6.605663,-6.605715,-6.605765,-6.605833,-6.605872,-6.605882,-6.605984,-6.606026,-6.606035,-6.606106,-6.606186,-6.606251,-6.60637,-6.606594,-6.606601,-6.606623,-6.606626,-6.606671,-6.606678,-6.60675,-6.60671,-6.606639,-6.606589,-6.606573,-6.606525,-6.606559,-6.606598,-6.606634,-6.606668,-6.606676,-6.606685,-6.606694,-6.606703,-6.606722,-6.606737,-6.60677,-6.606758,-6.606752,-6.606727,-6.606701,-6.606623,-6.606611,-6.606591,-6.606572,-6.606561,-6.606539,-6.60651,-6.606466,-6.606455,-6.606444,-6.60641,-6.606376,-6.606194,-6.606181,-6.606148,-6.606134,-6.606091,-6.606083,-6.606052,-6.606016,-6.606006,-6.605988,-6.605901,-6.605867,-6.605837,-6.605803,-6.605793,-6.605728,-6.605701,-6.605636,-6.605617,-6.605609,-6.605601,-6.605598,-6.605598,-6.605607,-6.605611,-6.605614,-6.605609,-6.605594,-6.605524,-6.605409,-6.605296,-6.605261,-6.605259,-6.605248,-6.605171,-6.605152,-6.605129,-6.605048,-6.605022,-6.605009,-6.605,-6.604949,-6.604768,-6.604745,-6.604731,-6.604716,-6.604702,-6.604686,-6.604624,-6.604584,-6.604546,-6.604535,-6.604435,-6.604368,-6.604337,-6.604269,-6.604204,-6.60417,-6.604077]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":[null,"red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","orange"],"weight":5,"opacity":0.5,"fill":false,"fillColor":[null,"red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","orange"],"fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[[-6.600495,-6.606634,-6.600183,-6.593231],[106.93018,106.926014,106.930358,106.930883],{"iconUrl":{"data":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=","index":0},"iconWidth":1,"iconHeight":1},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["1","2","3","4"],{"interactive":false,"permanent":true,"direction":"top","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":true,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[106.931285,106.931285,106.931286,106.931185,106.931134,106.931075,106.931047,106.931039,106.930964,106.930942,106.930944,106.930945,106.930946,106.930938,106.930905,106.930891,106.930883,106.930851,106.930844,106.930841,106.930851,106.930879,106.930958,106.930981,106.930991,106.931013,106.931073,106.931064,106.931023,106.93095,106.930855,106.930823,106.930811,106.930766,106.930741,106.930781,106.930782,106.930787,106.930785,106.930774,106.93073,106.930706,106.930719,106.930701,106.930633,106.930545,106.93044,106.930432,106.930347,106.930351,106.930341,106.930319,106.930287,106.93018,106.930353,106.930345,106.930335,106.930337,106.930347,106.930349,106.930388,106.930409,106.930516,106.93054,106.930565,106.930606,106.930702,106.930783,106.930799,106.930794,106.930792,106.93078,106.930778,106.930773,106.930771,106.930775,106.930778,106.930783,106.930788,106.93079,106.930792,106.930817,106.930827,106.930847,106.930951,106.931001,106.930992,106.930992,106.931033,106.931071,106.931049,106.931045,106.931036,106.931057,106.931021,106.930939,106.930929,106.930861,106.930858,106.930857,106.930858,106.930858,106.930859,106.930908,106.930931,106.930936,106.93094,106.930948,106.930969,106.930975,106.930986,106.931016,106.93108,106.931099,106.931099,106.931104,106.931108,106.931121,106.931129,106.931238,106.931261,106.931281,106.931289,106.931311,106.931329,106.931334],"lat":[-6.596088,-6.596103,-6.596114,-6.596365,-6.596474,-6.59663,-6.596684,-6.596697,-6.59681,-6.596868,-6.596889,-6.596916,-6.596953,-6.596984,-6.597095,-6.597217,-6.597256,-6.597371,-6.5974,-6.597437,-6.597474,-6.597558,-6.597763,-6.597802,-6.597842,-6.598117,-6.598183,-6.598202,-6.598269,-6.598426,-6.598544,-6.598569,-6.598578,-6.598616,-6.598739,-6.598872,-6.598891,-6.598937,-6.598964,-6.59901,-6.599131,-6.599249,-6.59938,-6.599455,-6.599566,-6.599668,-6.599826,-6.599847,-6.600059,-6.600148,-6.600187,-6.600239,-6.600308,-6.600495,-6.600142,-6.600099,-6.600047,-6.60001,-6.599936,-6.599925,-6.599852,-6.599817,-6.599712,-6.599691,-6.599661,-6.5996,-6.599398,-6.599194,-6.598924,-6.598893,-6.598882,-6.598812,-6.598801,-6.598782,-6.598771,-6.59873,-6.59872,-6.598709,-6.598698,-6.598688,-6.598675,-6.598602,-6.598585,-6.598559,-6.598465,-6.598404,-6.598364,-6.598353,-6.598229,-6.598189,-6.598153,-6.598187,-6.597966,-6.597911,-6.59783,-6.597715,-6.59765,-6.597464,-6.597427,-6.597411,-6.597394,-6.597366,-6.597356,-6.597208,-6.597077,-6.597062,-6.597046,-6.596991,-6.596886,-6.596871,-6.596838,-6.596796,-6.596722,-6.596652,-6.596637,-6.596592,-6.596554,-6.596507,-6.596499,-6.596376,-6.59633,-6.596268,-6.596143,-6.596062,-6.595986,-6.595939]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":[null,"yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","orange","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","green"],"weight":5,"opacity":0.5,"fill":false,"fillColor":[null,"yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","orange","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","green"],"fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[[-6.600495,-6.606634,-6.600183,-6.593231],[106.93018,106.926014,106.930358,106.930883],{"iconUrl":{"data":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=","index":0},"iconWidth":1,"iconHeight":1},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["1","2","3","4"],{"interactive":false,"permanent":true,"direction":"top","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":true,"className":"","sticky":true},null]}],"limits":{"lat":[-6.60677,-6.592811],"lng":[106.925868,106.931495]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="cell">
+
+</div>
+</section><section id="penutup" class="level1"><h1>Penutup</h1>
+<p>Contoh diatas merupakan salah satu hal yang bisa dilakukan oleh R dengan data GPX. Kedepannya mungkin saya akan berbagi cara bagaimana meganimasikan rute tersebut.</p>
+
+
+<!-- -->
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Disalin!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Disalin!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Kode Sumber</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb11" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Membaca Data Jalur GPS di R"</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Visualisasi dan pemetaan jalur menggunakan R "</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: Ryan Avriandy</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2023-10-20"</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co">  - r</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co">  - gis </span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co">  - leaflet</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - data-viz</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - strava</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>Banyak orang saat ini menggunakan Strava untuk berbagi pencapaian mereka ketika melakukan aktivitas olahraga. Dengan Strava, kamu dapat dengan mudah memantau dan berbagi rute saat *hiking*, berlari, bersepeda, berkuda hingga mengemudi. Selain itu, kamu bisa melihat rincian seperti jarak, waktu, dan kecepatan rata-rata. Yang lebih menarik, Strava memungkinkan kamu berinteraksi dengan komunitas olahraga, sehingga kamu dapat memotivasi teman-teman atau mengikuti pencapaian mereka.</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>Sebagai orang yang juga kompetitif, saya juga menggunakan Strava untuk dapat mengejar pencapaian teman-teman saya. Dalam blog ini saya akan berbagi cara untuk meniru visualisasi data yang biasa dihasilkan oleh strava menggunakan R.</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data yang diperlukan</span></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>Dalam simulasi ini, kita akan menggunakan rute GPX yang dihasilkan dari *trekking* di <span class="co">[</span><span class="ot">Bukit Paniisan.</span><span class="co">](https://youtu.be/WosdtRpf-0M?si=vvC1yyssGdwriphN)</span> Unduh data tersebut melalui tautan berikut ini; <span class="co">[</span><span class="ot">data_trekking_gpx</span><span class="co">](https://github.com/ryanavri/ryroot_data/blob/main/gpxdatainr/Ngebukit.gpx)</span>. Lalu unduh paket yang diperlukan dalam daftar paket dibawah ini</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="in">```{r load_library, message=FALSE, warning=FALSE}</span></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(XML)</span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(geosphere)</span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)</span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapview)</span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a><span class="fu"># Membaca data GPX</span></span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>Mengunggah data GPX dan mengambil informasi yang dibutuhkan ke dalam *data frame*</span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a><span class="in">```{r load_data, message=FALSE, warning=FALSE}</span></span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Membaca data gpx</span></span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a>gpx_data <span class="ot">&lt;-</span> <span class="fu">htmlTreeParse</span>(<span class="at">file =</span> <span class="st">"Ngebukit.gpx"</span>, <span class="at">useInternalNodes =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a><span class="co"># Mengakses data kordinat, elevasi dan waktu</span></span>
+<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a>coords <span class="ot">&lt;-</span> <span class="fu">xpathSApply</span>(<span class="at">doc =</span> gpx_data, <span class="at">path =</span> <span class="st">"//trkpt"</span>, <span class="at">fun =</span> xmlAttrs)</span>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a>elevation <span class="ot">&lt;-</span> <span class="fu">xpathSApply</span>(<span class="at">doc =</span> gpx_data, <span class="at">path =</span> <span class="st">"//trkpt/ele"</span>, <span class="at">fun =</span> xmlValue)</span>
+<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a>datetime <span class="ot">&lt;-</span> <span class="fu">xpathSApply</span>(<span class="at">doc =</span> gpx_data, <span class="at">path =</span> <span class="st">"//trkpt/time"</span>, <span class="at">fun =</span> xmlValue)</span>
+<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Mengatur ke dalam dataframe</span></span>
+<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a>  <span class="at">lon =</span> <span class="fu">as.numeric</span>(coords[<span class="st">"lon"</span>, ]),</span>
+<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a>  <span class="at">lat =</span> <span class="fu">as.numeric</span>(coords[<span class="st">"lat"</span>, ]),</span>
+<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a>  <span class="at">elevation =</span> <span class="fu">as.numeric</span>(elevation),</span>
+<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a>  <span class="at">datetime =</span> <span class="fu">as_datetime</span>(datetime, <span class="at">tz=</span><span class="st">"Asia/Bangkok"</span>)</span>
+<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span>
+<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a>Kemudian, kita akan mengondisikan data tersebut untuk mendapatkan informasi jarak *trajectories* (pergerakan dari satu titik GPS ke titik berikutnya), dan tempo (waktu yang dibutuhkan untuk mencapai jarak tempuh sejauh 1 km)</span>
+<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a><span class="in">```{r edit_df}</span></span>
+<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a><span class="co"># Menghitung jarak (dalam meter) antara dua titik GPS berturut-turut menggunakan formula Haversine</span></span>
+<span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> </span>
+<span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a>  df <span class="sc">%&gt;%</span></span>
+<span id="cb11-65"><a href="#cb11-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">lat_lead =</span> <span class="fu">lead</span>(lat)) <span class="sc">%&gt;%</span></span>
+<span id="cb11-66"><a href="#cb11-66" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">lon_lead =</span> <span class="fu">lead</span>(lon)) <span class="sc">%&gt;%</span></span>
+<span id="cb11-67"><a href="#cb11-67" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb11-68"><a href="#cb11-68" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">dist_to_lead_m =</span> <span class="fu">distm</span>(<span class="fu">c</span>(lon, lat), </span>
+<span id="cb11-69"><a href="#cb11-69" aria-hidden="true" tabindex="-1"></a>                                <span class="fu">c</span>(lon_lead, lat_lead), </span>
+<span id="cb11-70"><a href="#cb11-70" aria-hidden="true" tabindex="-1"></a>                                <span class="at">fun =</span> distHaversine)[<span class="dv">1</span>,<span class="dv">1</span>]) <span class="sc">%&gt;%</span></span>
+<span id="cb11-71"><a href="#cb11-71" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
+<span id="cb11-72"><a href="#cb11-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-73"><a href="#cb11-73" aria-hidden="true" tabindex="-1"></a><span class="co"># Menghitung selisih waktu (dalam detik) antara titik GPS berturut-turut</span></span>
+<span id="cb11-74"><a href="#cb11-74" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> </span>
+<span id="cb11-75"><a href="#cb11-75" aria-hidden="true" tabindex="-1"></a>  df <span class="sc">%&gt;%</span></span>
+<span id="cb11-76"><a href="#cb11-76" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">datetime_lead =</span> <span class="fu">lead</span>(datetime)) <span class="sc">%&gt;%</span></span>
+<span id="cb11-77"><a href="#cb11-77" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ts_diff_s =</span> <span class="fu">as.numeric</span>(<span class="fu">difftime</span>(datetime_lead, </span>
+<span id="cb11-78"><a href="#cb11-78" aria-hidden="true" tabindex="-1"></a>                                         datetime, <span class="at">units =</span> <span class="st">"secs"</span>))) </span>
+<span id="cb11-79"><a href="#cb11-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-80"><a href="#cb11-80" aria-hidden="true" tabindex="-1"></a><span class="co"># Menghitung kecepatan dalam meter per detik dan kilometer per jam</span></span>
+<span id="cb11-81"><a href="#cb11-81" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> </span>
+<span id="cb11-82"><a href="#cb11-82" aria-hidden="true" tabindex="-1"></a>  df <span class="sc">%&gt;%</span></span>
+<span id="cb11-83"><a href="#cb11-83" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">speed_m_per_sec =</span> dist_to_lead_m <span class="sc">/</span> ts_diff_s) <span class="sc">%&gt;%</span></span>
+<span id="cb11-84"><a href="#cb11-84" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">speed_km_per_h =</span> speed_m_per_sec <span class="sc">*</span> <span class="fl">3.6</span>)</span>
+<span id="cb11-85"><a href="#cb11-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-86"><a href="#cb11-86" aria-hidden="true" tabindex="-1"></a><span class="co"># Menghitung jarak akumulasi</span></span>
+<span id="cb11-87"><a href="#cb11-87" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span></span>
+<span id="cb11-88"><a href="#cb11-88" aria-hidden="true" tabindex="-1"></a>  df <span class="sc">%&gt;%</span></span>
+<span id="cb11-89"><a href="#cb11-89" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">distance =</span> <span class="fu">cumsum</span>(dist_to_lead_m))</span>
+<span id="cb11-90"><a href="#cb11-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-91"><a href="#cb11-91" aria-hidden="true" tabindex="-1"></a><span class="co"># Menghapus nilai yang hilang (NAs) dan jarak 0</span></span>
+<span id="cb11-92"><a href="#cb11-92" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(df)</span>
+<span id="cb11-93"><a href="#cb11-93" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df[<span class="sc">!</span><span class="fu">grepl</span>(<span class="st">"0"</span>, df<span class="sc">$</span>dist_to_lead_m),]</span>
+<span id="cb11-94"><a href="#cb11-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-95"><a href="#cb11-95" aria-hidden="true" tabindex="-1"></a><span class="co"># Menghitung tempo dalam menit per kilometer</span></span>
+<span id="cb11-96"><a href="#cb11-96" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> </span>
+<span id="cb11-97"><a href="#cb11-97" aria-hidden="true" tabindex="-1"></a>  df <span class="sc">%&gt;%</span></span>
+<span id="cb11-98"><a href="#cb11-98" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pace_minperkm =</span> ((ts_diff_s<span class="sc">/</span><span class="dv">60</span>) <span class="sc">/</span>(dist_to_lead_m<span class="sc">/</span><span class="dv">1000</span>))) </span>
+<span id="cb11-99"><a href="#cb11-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-100"><a href="#cb11-100" aria-hidden="true" tabindex="-1"></a><span class="co"># Menghapus beberapa kolom yang tidak akan digunakan lagi</span></span>
+<span id="cb11-101"><a href="#cb11-101" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> </span>
+<span id="cb11-102"><a href="#cb11-102" aria-hidden="true" tabindex="-1"></a>  df <span class="sc">%&gt;%</span> </span>
+<span id="cb11-103"><a href="#cb11-103" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(lat_lead, lon_lead, </span>
+<span id="cb11-104"><a href="#cb11-104" aria-hidden="true" tabindex="-1"></a>            datetime_lead, ts_diff_s))</span>
+<span id="cb11-105"><a href="#cb11-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-106"><a href="#cb11-106" aria-hidden="true" tabindex="-1"></a><span class="co"># Menampilkan data yang sudah dikelola</span></span>
+<span id="cb11-107"><a href="#cb11-107" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
+<span id="cb11-108"><a href="#cb11-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-109"><a href="#cb11-109" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-110"><a href="#cb11-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-111"><a href="#cb11-111" aria-hidden="true" tabindex="-1"></a><span class="fu"># Membuat plot elevasi dan tempo</span></span>
+<span id="cb11-112"><a href="#cb11-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-113"><a href="#cb11-113" aria-hidden="true" tabindex="-1"></a>Setelah itu, kita bisa membuat grafik yang menggambarkan plot elevasi sepanjang jarak tempuh dan tempo.</span>
+<span id="cb11-114"><a href="#cb11-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-115"><a href="#cb11-115" aria-hidden="true" tabindex="-1"></a><span class="in">```{r plot_gpstrack}</span></span>
+<span id="cb11-116"><a href="#cb11-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-117"><a href="#cb11-117" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot Elevasi</span></span>
+<span id="cb11-118"><a href="#cb11-118" aria-hidden="true" tabindex="-1"></a>plot_elevation <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb11-119"><a href="#cb11-119" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> distance<span class="sc">/</span><span class="dv">1000</span>, <span class="at">y =</span> elevation)) <span class="sc">+</span></span>
+<span id="cb11-120"><a href="#cb11-120" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">color=</span><span class="st">"green"</span>) <span class="sc">+</span></span>
+<span id="cb11-121"><a href="#cb11-121" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> <span class="fu">min</span>(elevation), <span class="at">ymax =</span> elevation), </span>
+<span id="cb11-122"><a href="#cb11-122" aria-hidden="true" tabindex="-1"></a>                <span class="at">fill =</span> <span class="st">"gray"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb11-123"><a href="#cb11-123" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylab</span>(<span class="st">"Elevation (m)"</span>) <span class="sc">+</span></span>
+<span id="cb11-124"><a href="#cb11-124" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Distance (km)"</span>) <span class="sc">+</span></span>
+<span id="cb11-125"><a href="#cb11-125" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb11-126"><a href="#cb11-126" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">axis.title.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb11-127"><a href="#cb11-127" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.text.x =</span> <span class="fu">element_blank</span>())  </span>
+<span id="cb11-128"><a href="#cb11-128" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb11-129"><a href="#cb11-129" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot Tempo</span></span>
+<span id="cb11-130"><a href="#cb11-130" aria-hidden="true" tabindex="-1"></a>plot_pace <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb11-131"><a href="#cb11-131" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(pace_minperkm <span class="sc">&lt;</span> <span class="dv">20</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb11-132"><a href="#cb11-132" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> distance<span class="sc">/</span><span class="dv">1000</span>, <span class="at">y =</span> pace_minperkm)) <span class="sc">+</span> </span>
+<span id="cb11-133"><a href="#cb11-133" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span> </span>
+<span id="cb11-134"><a href="#cb11-134" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Pace (min/km)"</span>) <span class="sc">+</span> </span>
+<span id="cb11-135"><a href="#cb11-135" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Distance (km)"</span>) <span class="sc">+</span></span>
+<span id="cb11-136"><a href="#cb11-136" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_reverse</span>() <span class="sc">+</span> </span>
+<span id="cb11-137"><a href="#cb11-137" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>()</span>
+<span id="cb11-138"><a href="#cb11-138" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb11-139"><a href="#cb11-139" aria-hidden="true" tabindex="-1"></a><span class="co"># Menggabungkan kedua plot menggunakan plot_grid dari cowplot</span></span>
+<span id="cb11-140"><a href="#cb11-140" aria-hidden="true" tabindex="-1"></a>combined_plot <span class="ot">&lt;-</span> <span class="fu">plot_grid</span>(plot_elevation, plot_pace, <span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">rel_heights =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">2</span>))</span>
+<span id="cb11-141"><a href="#cb11-141" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb11-142"><a href="#cb11-142" aria-hidden="true" tabindex="-1"></a><span class="co"># Menampilkan plot yang digabungkan</span></span>
+<span id="cb11-143"><a href="#cb11-143" aria-hidden="true" tabindex="-1"></a>combined_plot</span>
+<span id="cb11-144"><a href="#cb11-144" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-145"><a href="#cb11-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-146"><a href="#cb11-146" aria-hidden="true" tabindex="-1"></a><span class="fu"># Plot rute tersebut pada peta</span></span>
+<span id="cb11-147"><a href="#cb11-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-148"><a href="#cb11-148" aria-hidden="true" tabindex="-1"></a>Lalu kita akan menambahkan anotasi penanda jarak tempuh dalam jalur tersebut di setiap 1 km, lalu menampilkan rute trekking tersebut pada peta.</span>
+<span id="cb11-149"><a href="#cb11-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-150"><a href="#cb11-150" aria-hidden="true" tabindex="-1"></a><span class="in">```{r km_label}</span></span>
+<span id="cb11-151"><a href="#cb11-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-152"><a href="#cb11-152" aria-hidden="true" tabindex="-1"></a><span class="co"># Menambahkan markah jarak pada peta</span></span>
+<span id="cb11-153"><a href="#cb11-153" aria-hidden="true" tabindex="-1"></a>df_dist_marks <span class="ot">&lt;-</span> </span>
+<span id="cb11-154"><a href="#cb11-154" aria-hidden="true" tabindex="-1"></a>  df <span class="sc">%&gt;%</span> </span>
+<span id="cb11-155"><a href="#cb11-155" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">dist_m_cumsum_km_floor =</span> <span class="fu">floor</span>(distance <span class="sc">/</span> <span class="dv">1000</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb11-156"><a href="#cb11-156" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(dist_m_cumsum_km_floor) <span class="sc">%&gt;%</span></span>
+<span id="cb11-157"><a href="#cb11-157" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">row_number</span>() <span class="sc">==</span> <span class="dv">1</span>, dist_m_cumsum_km_floor <span class="sc">&gt;</span> <span class="dv">0</span>) </span>
+<span id="cb11-158"><a href="#cb11-158" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-159"><a href="#cb11-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-160"><a href="#cb11-160" aria-hidden="true" tabindex="-1"></a><span class="in">```{r map_basic}</span></span>
+<span id="cb11-161"><a href="#cb11-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-162"><a href="#cb11-162" aria-hidden="true" tabindex="-1"></a><span class="co"># Menampilkan jalur trekking pada peta</span></span>
+<span id="cb11-163"><a href="#cb11-163" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb11-164"><a href="#cb11-164" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addTiles</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb11-165"><a href="#cb11-165" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addPolylines</span>(<span class="at">data =</span> df, <span class="at">lat =</span> <span class="sc">~</span>lat, <span class="at">lng =</span> <span class="sc">~</span>lon) <span class="sc">%&gt;%</span></span>
+<span id="cb11-166"><a href="#cb11-166" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addMarkers</span>(<span class="at">data =</span> df_dist_marks, <span class="at">lat =</span> <span class="sc">~</span>lat, <span class="at">lng =</span> <span class="sc">~</span>lon, <span class="at">label =</span>  <span class="sc">~</span>dist_m_cumsum_km_floor, </span>
+<span id="cb11-167"><a href="#cb11-167" aria-hidden="true" tabindex="-1"></a>             <span class="at">labelOptions =</span> <span class="fu">labelOptions</span>(<span class="at">noHide =</span> T, <span class="at">direction =</span> <span class="st">'top'</span>, <span class="at">textOnly =</span> T))</span>
+<span id="cb11-168"><a href="#cb11-168" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb11-169"><a href="#cb11-169" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-170"><a href="#cb11-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-171"><a href="#cb11-171" aria-hidden="true" tabindex="-1"></a>Selanjutnya, kita juga dapat meningkatkan atau memperkaya informasi jalur pergerakan kita dengan menggunakan fungsi dibawah ini untuk membuat rentang elevasi dalam jalur trekking.</span>
+<span id="cb11-172"><a href="#cb11-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-173"><a href="#cb11-173" aria-hidden="true" tabindex="-1"></a><span class="in">```{r spec_color}</span></span>
+<span id="cb11-174"><a href="#cb11-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-175"><a href="#cb11-175" aria-hidden="true" tabindex="-1"></a><span class="co"># Buat fungsi untuk mendapatkan warna berdasarkan rentang elevasi</span></span>
+<span id="cb11-176"><a href="#cb11-176" aria-hidden="true" tabindex="-1"></a>get_color <span class="ot">&lt;-</span> <span class="cf">function</span>(elevation) {</span>
+<span id="cb11-177"><a href="#cb11-177" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (elevation <span class="sc">&lt;</span> <span class="dv">567</span>) {</span>
+<span id="cb11-178"><a href="#cb11-178" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="st">"green"</span>)</span>
+<span id="cb11-179"><a href="#cb11-179" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb11-180"><a href="#cb11-180" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (elevation <span class="sc">&lt;</span> <span class="dv">656</span>) {</span>
+<span id="cb11-181"><a href="#cb11-181" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="st">"yellow"</span>)</span>
+<span id="cb11-182"><a href="#cb11-182" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb11-183"><a href="#cb11-183" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (elevation <span class="sc">&lt;</span> <span class="dv">757</span>) {</span>
+<span id="cb11-184"><a href="#cb11-184" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="st">"orange"</span>)</span>
+<span id="cb11-185"><a href="#cb11-185" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb11-186"><a href="#cb11-186" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="st">"red"</span>)</span>
+<span id="cb11-187"><a href="#cb11-187" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-188"><a href="#cb11-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-189"><a href="#cb11-189" aria-hidden="true" tabindex="-1"></a><span class="co"># Buat dataset baru dengan variabel warna</span></span>
+<span id="cb11-190"><a href="#cb11-190" aria-hidden="true" tabindex="-1"></a>df_color <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb11-191"><a href="#cb11-191" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb11-192"><a href="#cb11-192" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">color =</span> <span class="fu">get_color</span>(elevation))</span>
+<span id="cb11-193"><a href="#cb11-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-194"><a href="#cb11-194" aria-hidden="true" tabindex="-1"></a><span class="co"># Tambahkan kolom warna sebelumnya menggunakan fungsi lag dari dplyr</span></span>
+<span id="cb11-195"><a href="#cb11-195" aria-hidden="true" tabindex="-1"></a>df_color<span class="sc">$</span>last_color <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">lag</span>(df_color<span class="sc">$</span>color)</span>
+<span id="cb11-196"><a href="#cb11-196" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-197"><a href="#cb11-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-198"><a href="#cb11-198" aria-hidden="true" tabindex="-1"></a><span class="in">```{r comp_map}</span></span>
+<span id="cb11-199"><a href="#cb11-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-200"><a href="#cb11-200" aria-hidden="true" tabindex="-1"></a><span class="co"># Buat peta yang sudah ada gradasi elevasi</span></span>
+<span id="cb11-201"><a href="#cb11-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-202"><a href="#cb11-202" aria-hidden="true" tabindex="-1"></a>map <span class="ot">&lt;-</span> <span class="fu">leaflet</span>() <span class="sc">%&gt;%</span> <span class="fu">addTiles</span>()</span>
+<span id="cb11-203"><a href="#cb11-203" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (color <span class="cf">in</span> <span class="fu">levels</span>(<span class="fu">as.factor</span>(df_color<span class="sc">$</span>color))) {</span>
+<span id="cb11-204"><a href="#cb11-204" aria-hidden="true" tabindex="-1"></a>  map <span class="ot">&lt;-</span> <span class="fu">addPolylines</span>(map, <span class="at">lat =</span> <span class="sc">~</span>lat, <span class="at">lng =</span> <span class="sc">~</span>lon, <span class="at">data =</span> df_color[df_color<span class="sc">$</span>color <span class="sc">==</span> color <span class="sc">|</span> df_color<span class="sc">$</span>last_color <span class="sc">==</span> color, ], <span class="at">color =</span> <span class="sc">~</span>color) <span class="sc">%&gt;%</span></span>
+<span id="cb11-205"><a href="#cb11-205" aria-hidden="true" tabindex="-1"></a>    <span class="fu">addLabelOnlyMarkers</span>(<span class="at">data =</span> df_dist_marks, <span class="at">lat =</span> <span class="sc">~</span>lat, <span class="at">lng =</span> <span class="sc">~</span>lon, <span class="at">label =</span>  <span class="sc">~</span>dist_m_cumsum_km_floor, </span>
+<span id="cb11-206"><a href="#cb11-206" aria-hidden="true" tabindex="-1"></a>               <span class="at">labelOptions =</span> <span class="fu">labelOptions</span>(<span class="at">noHide =</span> T, <span class="at">direction =</span> <span class="st">'top'</span>, <span class="at">textOnly =</span> T, <span class="at">icon=</span><span class="cn">NULL</span>))</span>
+<span id="cb11-207"><a href="#cb11-207" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-208"><a href="#cb11-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-209"><a href="#cb11-209" aria-hidden="true" tabindex="-1"></a>map</span>
+<span id="cb11-210"><a href="#cb11-210" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-211"><a href="#cb11-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-212"><a href="#cb11-212" aria-hidden="true" tabindex="-1"></a><span class="in">```{r savemap, echo=FALSE, message=FALSE, warning=FALSE}</span></span>
+<span id="cb11-213"><a href="#cb11-213" aria-hidden="true" tabindex="-1"></a><span class="co"># Simpan peta sebagai gambar</span></span>
+<span id="cb11-214"><a href="#cb11-214" aria-hidden="true" tabindex="-1"></a><span class="fu">mapshot</span>(map, <span class="at">file =</span> <span class="st">"~/Rplot.png"</span>)</span>
+<span id="cb11-215"><a href="#cb11-215" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-216"><a href="#cb11-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-217"><a href="#cb11-217" aria-hidden="true" tabindex="-1"></a><span class="fu"># Penutup</span></span>
+<span id="cb11-218"><a href="#cb11-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-219"><a href="#cb11-219" aria-hidden="true" tabindex="-1"></a>Contoh diatas merupakan salah satu hal yang bisa dilakukan oleh R dengan data GPX. Kedepannya mungkin saya akan berbagi cara bagaimana meganimasikan rute tersebut.</span></code><button title="Salin ke Papan Klip" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left"><span class="faux-block">All content licensed under<br><a href="https://creativecommons.org/licenses/by/4.0/"><i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> <i class="fa-brands fa-creative-commons-by" aria-label="creative-commons-by"></i> Creative Commons CC BY 4.0</a></span><br></div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right"><span class="faux-block">Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i> and <a href="https://quarto.org/">Quarto</a></span></div>
+  </div>
+</footer>
+
+
+</body></html>

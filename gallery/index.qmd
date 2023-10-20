@@ -13,6 +13,13 @@ title: "Gallery"
 ------------------------------------------------------------------------
 
 # Trekking
+
+## Bukit Paniisan
+
+{{< video https://www.youtube.com/watch?v=WosdtRpf-0M
+    title='Trekking Bukit Paniisan' 
+>}}
+
 ## Gunung Kencana
 
 {{< video https://www.youtube.com/watch?v=6SLz7ipog-s

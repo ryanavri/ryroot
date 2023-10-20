@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ryroot.netlify.app/about.html</loc>
-    <lastmod>2023-09-19T04:51:21.563Z</lastmod>
-  </url>
-  <url>
     <loc>https://ryroot.netlify.app/blog/2023/09/12/R_in_ecology/index.html</loc>
-    <lastmod>2023-09-19T04:51:22.908Z</lastmod>
+    <lastmod>2023-10-20T08:07:20.792Z</lastmod>
   </url>
   <url>
     <loc>https://ryroot.netlify.app/blog/2023/09/18/Diploendozoochory/index.html</loc>
-    <lastmod>2023-09-19T04:51:24.035Z</lastmod>
+    <lastmod>2023-10-20T08:07:21.480Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ryroot.netlify.app/blog/2023/10/20/gpxdatainr/index.html</loc>
+    <lastmod>2023-10-20T08:07:31.296Z</lastmod>
   </url>
   <url>
     <loc>https://ryroot.netlify.app/blog/index.html</loc>
-    <lastmod>2023-09-19T04:51:24.683Z</lastmod>
+    <lastmod>2023-10-20T08:07:31.719Z</lastmod>
   </url>
   <url>
     <loc>https://ryroot.netlify.app/gallery/index.html</loc>
-    <lastmod>2023-09-19T04:51:25.236Z</lastmod>
+    <lastmod>2023-10-20T08:07:32.075Z</lastmod>
   </url>
   <url>
     <loc>https://ryroot.netlify.app/index.html</loc>
-    <lastmod>2023-09-19T04:51:25.822Z</lastmod>
+    <lastmod>2023-10-20T08:07:32.421Z</lastmod>
   </url>
   <url>
     <loc>https://ryroot.netlify.app/portfolio/index.html</loc>
-    <lastmod>2023-09-19T04:51:26.407Z</lastmod>
+    <lastmod>2023-10-20T08:07:32.797Z</lastmod>
   </url>
 </urlset>
