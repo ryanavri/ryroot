@@ -10,7 +10,8 @@ project:
   render:
     - "*.qmd"
 
-freeze: true
+execute:
+  freeze: auto
 
 bibliography: files/bib/references.bib
 csl: files/bib/apa-single-spaced.csl

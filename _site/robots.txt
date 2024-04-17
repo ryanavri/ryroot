@@ -1,1 +1,0 @@
-Sitemap: https://ryroot.netlify.app/sitemap.xml
