@@ -5,10 +5,10 @@ author:
   - name: Ryan Avriandy
 date: "2023-09-12"
 categories:
-  - r
-  - statistics
   - data science
   - ecology
+  - r
+  - statistics
 ---
 
 # Mengapa menggunakan R?

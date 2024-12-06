@@ -1,0 +1,158 @@
+---
+title: "Mengakses Data Ekologi"
+description: "Bagaimana mengakses berbagai sumber data yang tersedia di publik"
+author:
+  - name: Ryan Avriandy
+date: "2024-04-16"
+categories:
+  - data science
+  - ecology
+  - r
+  - tutorial
+---
+
+Di [blog](https://ryroot.netlify.app/blog/2023/09/12/R_in_ecology/) sebelumnya, saya telah membahas penggunaan R sebagai perangkat lunak analisis data oleh para praktisi ekologi. Ketika kita mempelajari R untuk analisis data, seringkali kita memerlukan data ekologi yang sudah siap pakai untuk melatih kemampuan analisis sebelum menggunakan data yang sebenernya dari hasil penelitian kita. Oleh karena itu, tulisan ini akan fokus pada sumber-sumber data ekologi yang umum digunakan dan bagaimana Anda bisa mengaksesnya.
+
+Dalam rangkaian tulisan ini, saya akan mengulas beberapa dataset ekologi yang banyak digunakan oleh para praktisi ekologi:
+
+-   [**GBIF (Global Biodiversity Information Facility**)](https://www.gbif.org/): Sebuah *platform* internasional yang menyediakan akses terhadap data tentang perjumpaan keanekaragaman hayati di seluruh dunia.
+
+-   [**iNaturalist**](https://www.inaturalist.org/): *Platform* yang memungkinkan para peneliti dan hobiis alam membagikan pengamatan tentang spesies yang mereka dokumentasikan dan mendapatkan informasi nama spesies yang telah diverifikasi oleh komunitas secara urun daya.
+
+-   [**eBird**](https://ebird.org/home): Dikelola oleh [Cornell Lab of Ornithology](https://www.birds.cornell.edu/home/), merupakan *platform* bagi para pengamat burung secara global untuk mendokumentasikan sebaran, kelimpahan, penggunaan habitat dan tren melalui kerangka kerja yang terstandarisasi.
+
+-   [**Observation.org**](https://observation.org/pages/about/); Merupakan platform yang dirancang untuk memfasilitasi berbagi data temuan speseis dan analisis keanekaragaman hayati yang dapat digunakan baik oleh peneliti maupun pengamat amatir.
+
+-   [**Movebank**:](https://www.movebank.org/cms/movebank-main) Basis data yang mengoleksi data pelacakan pergerakan hewan dari kalung GPS (*GPS collar*)maupun alat pelacak lainnya. basis data ini mencakup data dari peneliti di seluruh dunia, yang mencakup berbagai spesies. Paket `move` dalam R berinteraksi dengan Movebank untuk memfasilitasi analisis data pergerakan hewan.
+
+# Data perjumpaan satwa
+
+Dari beberapa sumber data tersebut, kita bisa memulai dari yang paling sederhana yaitu perjumpaan spesies, situs seperti GBIF, iNaturalis dan eBird merupakan salah satu situs populer yang digunakan untuk mengakses data tersebut. Mengumpulkan data perjumpaan spesies dan keanekaragaman hayati dapat sangat berguna untuk memodelkan distribusi spesies dan memahami bagaimana mereka mungkin bereaksi terhadap perubahan lingkungan (misalnya, mempelajari dampak deforestasi atau pembangunan atau memprediksi potensi konflik manusia-satwa liar).
+
+Kalian bisa mengunjungi situs tersebut dan mencari spesies yang ingin kalian dapatkan informasi perjumpaannya secara manual, namun dalam tutorial ini kita akan mengakses data tersebut secara langsung melalui jaringan GBIF menggunakan paket utama `rgbif` di R.
+
+## Mengakses data GBIF dengan R
+
+Unduh dan pasang semua paket yang diperlukan
+
+```{r load_library, message=FALSE, warning=FALSE}
+library(rgbif)
+library(tidyverse)
+library(mapview)
+library(sf)
+```
+
+![Burung kuntul besar, 2 dewasa dan 1 anakan © Lip Kee](Ardea_alba_modesta.jpg){fig-align="center"}
+
+Dalam contoh fungsi dibawah ini, kita akan mengunduh data tentang burung kuntul besar (*Ardea alba*) di Indonesia. Data ini kita saring berdasarkan temuan langsung yang memiliki informasi koordinat. Kita membatasi pengunduhan hanya pada 300 temuan terbaru untuk mempersingkat waktu pengunduhan. Perlu dicatat, semakin banyak jumlah temuan yang kita batasi, proses pengunduhan akan semakin memakan waktu.
+
+```{r download, message=FALSE, warning=FALSE}
+# Fungsi untuk mengunduh dan menyimpannya dalam format dataframe
+dtbr <- occ_search(scientificName = 'Ardea alba',     # nama spesies 
+                 gadmGid = "IDN",                     # membatasi hanya temuan di Indonesia 
+                 hasCoordinate = TRUE,                # hanya yang memiliki informasi koordinat 
+                 basisOfRecord = "HUMAN_OBSERVATION", # membatasi hanya dari observasi langsung
+                 limit = 300)                         # membatasi jumlah observasi yang diunduh
+dt <- dtbr$data
+```
+
+Setelah data diunduh, kita dapat langsung menampilkan distribusi burung tersebut pada peta dari dataset yang telah kita peroleh.
+
+```{r vizualise, echo=TRUE, message=FALSE, warning=FALSE}
+dt_sp <- st_as_sf(dt, coords = c("decimalLongitude", "decimalLatitude"), crs = 4326)
+
+mapview(dt_sp, zcol = "species",
+        layer.name = "Perjumpaan Satwa",
+        map.types = c("OpenStreetMap", "Esri.WorldImagery"))
+```
+
+<br>
+
+Selanjutnya, kita dapat menganalisis frekuensi perjumpaan burung per tahun untuk setiap wilayah.
+
+```{r plot, echo=TRUE, message=FALSE, warning=FALSE}
+occurrence_summary <- dt %>%
+  group_by(year, stateProvince) %>%
+  summarise(count = n(), .groups = 'drop')
+
+ggplot(occurrence_summary, aes(x = year, y = count, fill = stateProvince)) +
+  geom_col(position = "dodge") +
+  labs(title = "Jumlah Perjumpaan per Daerah",
+       x = "Tahun",
+       y = "Jumlah perjumpaan",
+       fill = "Pulau") +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+Mengingat data berasal dari berbagai sumber dan platform yang memiliki perbedaan dalam standarisasi penulisan di kolom `stateProvince`, kita dapat menyederhanakan data tersebut menjadi temuan per pulau.
+
+```{r cleanup, echo=TRUE, message=FALSE, warning=FALSE}
+pul_data <- dt %>%
+  mutate(stateProvince = case_when(
+    grepl("Java|Jawa|Yogyakarta", stateProvince, ignore.case = TRUE) ~ "Jawa",
+    grepl("Kalimantan", stateProvince, ignore.case = TRUE) ~ "Kalimantan",
+    grepl("Papua", stateProvince, ignore.case = TRUE) ~ "Papua",
+    grepl("Aceh|Sumatera", stateProvince, ignore.case = TRUE) ~ "Sumatera",
+    grepl("Sulawesi", stateProvince, ignore.case = TRUE) ~ "Sulawesi",
+    grepl("Bali", stateProvince, ignore.case = TRUE) ~ "Bali",
+    TRUE ~ stateProvince  
+  ))
+```
+
+Kita kemudian dapat memplot data ini untuk menampilkan frekuensi perjumpaan per tahun per pulau.
+
+```{r cleanplot, echo=TRUE, message=FALSE, warning=FALSE}
+# Meringkas data temuan per tahun per pulau
+occurrence_summary <- pul_data %>%
+  group_by(year, stateProvince) %>%
+  summarise(count = n(), .groups = 'drop') %>%
+  filter(!is.na(stateProvince))
+
+# Membuat plot
+ggplot(occurrence_summary, aes(x = as.integer(year), y = count, fill = stateProvince)) +
+  geom_col(position = "dodge") +
+  scale_x_continuous(breaks = unique(occurrence_summary$year)) +
+  labs(
+    title = "Jumlah Perjumpaan per Tahun per Pulau",
+    x = "Tahun",
+    y = "Jumlah Perjumpaan",
+    fill = "Pulau"
+  ) +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+```
+
+Dari plot tersebut dapat dilihat bahwa Pulau Nusa Tenggara memiliki jumlah perjumpaan yang paling tinggi dibandingkan dengan pulau-pulau lainnya pada tahun 2023. Namun, tingginya jumlah perjumpaan ini tidak serta-merta menunjukkan bahwa populasi burung di wilayah tersebut lebih melimpah dibandingkan daerah lainnya. Sebaliknya, hal ini lebih mungkin mencerminkan tingkat partisipasi masyarakat yang lebih tinggi dalam mencatat temuan burung melalui *platform* GBIF pada tahun tersebut..
+
+Setelah selesai, data dapat disimpan ke dalam laptop kita untuk dianalisis lebih lanjut menggunakan aplikasi Sistem Informasi Geografis (SIG) atau aplikasi analisis lainnya.
+
+```{r keycit, echo=TRUE, message=FALSE, warning=FALSE}
+write.csv(pul_data, "data_gbif.csv")
+```
+
+Meskipun data yang diakses melalui jaringan Global Biodiversity Information Facility (GBIF) adalah gratis, penggunaannya tidak terlepas dari kewajiban. Etika yang berlaku mengharuskan pengguna untuk mengutip sumber data secara akurat sesuai dengan data yang diunduh. Pengutipan yang baik tidak hanya menghargai lembaga dan individu yang mempublikasikan data mereka, tetapi juga mendorong praktik berbagi data terbuka yang bermanfaat untuk kemajuan ilmu pengetahuan.
+
+Setiap observasi yang diunduh memiliki sebuah nilai `datasetkey`, yang merupakan kunci untuk melakukan pengutipan data dengan benar. Berikut adalah fungsi yang digunakan untuk melihat datasetkey dari seluruh data yang kita unduh.
+
+```{r lookcit, echo=TRUE, message=FALSE, warning=FALSE}
+unique(pul_data$datasetKey)
+```
+
+Fungsi di bawah ini kemudian digunakan untuk menghasilkan kutipan yang relevan dengan data yang kita unduh.
+
+```{r citation, echo=TRUE, message=FALSE, warning=FALSE}
+gbif_citation("50c9509d-22c7-4a22-a47d-8c48425ef4a7")
+gbif_citation("8a863029-f435-446a-821e-275f4f641165") 
+gbif_citation("4fa7b334-ce0d-4e88-aaae-2e0c138d049e") 
+```
+
+Dalam konteks penggunaan data dari *platform* tersebut, penting untuk menghormati dan mengakui sumber data dengan mencantumkan kutipan-kutipan yang relevan dalam referensi pada setiap laporan, publikasi, atau produk apa pun yang dihasilkan. Praktik ini juga membantu melindungi integritas ilmiah dan memastikan bahwa penggunaan dataset tetap sesuai dengan persyaratan yang telah ditetapkan oleh penyedia data.
+
+# Penutup
+
+Mengakses data ekologi melalui platform seperti GBIF memberikan peluang besar bagi para peneliti dan praktisi untuk memahami pola distribusi spesies, dampak perubahan lingkungan, dan berbagai aspek penting keanekaragaman hayati. Dengan memanfaatkan alat seperti paket `rgbif` dalam R, proses pengunduhan, analisis, hingga visualisasi data menjadi jauh lebih efisien dan terstruktur.
+
+Namun, penting untuk diingat bahwa penggunaan data ini datang dengan tanggung jawab. Kutipan sumber data yang akurat tidak hanya menghormati kontribusi komunitas ilmiah dan individu yang berbagi data, tetapi juga mendorong kolaborasi yang lebih baik dalam upaya global untuk konservasi keanekaragaman hayati.

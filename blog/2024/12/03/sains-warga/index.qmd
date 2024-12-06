@@ -1,0 +1,71 @@
+---
+title: "Sains Warga"
+description: "Gotong Royong Mengungkap Keanekaragaman Hayati"
+author:
+  - name: Ryan Avriandy
+date: "2024-12-03"
+categories:
+  - biodiversity
+  - citizen science
+  - conservation
+  - ecology
+bibliography: references.bib
+---
+
+# Awal Mula Konsep "Sains Warga"
+
+Pada tahun 1880, seorang guru di Mississippi bernama **Wells Cooke** memulai langkah sederhana yang kemudian menjadi tonggak sejarah dalam penelitian keanekaragaman hayati. Ia mencatat pola migrasi burung di wilayahnya. Menyadari pentingnya data tersebut, Cooke mengajak pengamat burung amatir lainnya untuk berpartisipasi dalam mengumpulkan informasi serupa.
+
+![Wells Woodbridge Cooke © Jessica Zelt et al](img14.jpg){fig-align="center"}
+
+Empat tahun kemudian, pada tahun 1884, **American Ornithologists’ Union** memberikan dukungan penuh terhadap inisiatif ini. Dukungan tersebut memungkinkan terbentuknya jaringan pengamat burung yang tersebar luas di seluruh Amerika Serikat dan Kanada. Para pengamat burung amatir mulai mencatat hasil observasi mereka, menciptakan kumpulan data yang sangat besar dan beragam. Selama 90 tahun berikutnya, hingga tahun 1970, lebih dari 3.000 relawan telah mengumpulkan sekitar 6 juta catatan observasi terkait 800 spesies burung, meliputi pola migrasi dan status populasi.
+
+Saat ini, data tersebut telah dipindai secara digital dan dikompilasi dalam program **North American Bird Phenology Program (BPP)**. Program ini bertujuan untuk memahami bagaimana perubahan iklim memengaruhi pola migrasi burung di seluruh Amerika Utara. Melalui analisis data historis ini, para ilmuwan dapat mengidentifikasi tren jangka panjang serta perubahan dalam perilaku migrasi burung yang berkaitan dengan perubahan iklim dan faktor lingkungan lainnya.
+
+Program BPP ini menjadi salah satu contoh awal yang menunjukkan bagaimana kontribusi masyarakat dapat menghasilkan data yang sangat berguna untuk penelitian ilmiah jangka panjang. Data ini membantu ilmuwan memahami dan memitigasi dampak perubahan iklim terhadap keanekaragaman hayati. Kisah Wells Cooke menjadi ilustrasi yang kuat tentang potensi partisipasi publik dalam mendukung ilmu pengetahuan dan konservasi lingkungan.
+
+Kisah tersebut mengawali sejarah bagaimana partisipasi sukarela warga berkontribusi pada ilmu pengetahuan, dan pada awal 1990-an, konsep ini didefinisikan sebagai "*citizen science*" atau sains warga. Sains warga adalah kolaborasi antara ilmuwan profesional dan warga biasa dalam mengumpulkan dan menganalisis data ilmiah.
+
+Di Indonesia, istilah "sains warga" kini mulai digunakan oleh berbagai pihak untuk menyebut kegiatan yang melibatkan masyarakat dalam observasi flora dan fauna. Namun, penting untuk memahami bahwa tidak semua kegiatan yang melibatkan masyarakat dapat dianggap sebagai sains warga. Setidaknya, kegiatan yang disebut sains warga perlu memenuhi empat prinsip utama berikut:
+
+1.  **Inklusivitas**\
+    Semua orang dapat berpartisipasi, terlepas dari latar belakang pendidikan atau pengalaman profesional, selama memiliki minat yang sama.
+
+2.  **Standarisasi Protokol**\
+    Protokol yang konsisten diperlukan untuk memastikan data dari berbagai kontributor dapat digabungkan, diverifikasi, dan digunakan secara efektif.
+
+3.  **Aplikatif**\
+    Data yang dihasilkan harus memiliki kualitas tinggi sehingga dapat dimanfaatkan oleh ilmuwan, akademisi, dan pembuat kebijakan.
+
+4.  **Keterbukaan Data**\
+    Kolaborasi antara relawan dan ilmuwan harus dilakukan secara transparan. Data yang dikumpulkan sebaiknya dapat diakses oleh publik atau kontributor, guna meningkatkan kepercayaan dan memfasilitasi pengambilan keputusan berbasis data. Prinsip ini juga harus diimbangi dengan penghormatan terhadap kontribusi individu melalui atribusi sitasi yang jelas.
+
+Jika salah satu elemen ini tidak terpenuhi, maka kegiatan tersebut belum dapat disebut sebagai sains warga. Sebagai contoh, jika data yang dikumpulkan tidak memiliki protokol yang jelas, maka data tersebut sulit digunakan untuk menghasilkan produk ilmiah atau mendukung pengambilan keputusan oleh pemangku kepentingan. Selain itu, jika data yang dikumpulkan tidak dapat diakses oleh kontributor atau masyarakat yang berkontribusi, maka kegiatan tersebut lebih tepat disebut sebagai pelibatan masyarakat biasa. Lebih buruk lagi, jika sebuah instansi menggunakan data yang dikumpulkan tanpa memberikan atribusi yang layak kepada kontributor, hal tersebut dapat mencederai semangat transparansi dan kolaborasi dalam sains warga.
+
+Dalam konteks keanekaragaman hayati, salah satu platform sains warga modern yang paling terkemuka adalah GBIF dan iNaturalist. Kedua platform tersebut fokus pada informasi geospasial temuan satwa dan tumbuhan. Saat tulisan ini dibuat, GBIF sudah mengakumulasi lebih dari 2,9 juta observasi dan berkontribusi pada lebih dari 10.000 artikel ilmiah yang baik secara langsung maupun tidak langsung menggunakan GBIF sebagai sumber datanya.
+
+Secara kolektif, data dan artikel ilmiah yang dihasilkan dari sains warga memungkinkan peneliti menjawab pertanyaan-pertanyaan besar yang sebelumnya sulit dijangkau, seperti memahami pola migrasi, perubahan populasi spesies, dan dampak perubahan iklim terhadap keanekaragaman hayati [@mckinley2017]. Hal ini dimungkinkan karena sains warga melibatkan partisipasi luas dari masyarakat, sehingga cakupan pengamatan menjadi lebih besar, baik secara geografis maupun temporal. Dengan melibatkan ribuan hingga jutaan relawan, sains warga mampu mengumpulkan data dalam skala global dan jangka panjang, yang sulit dicapai dengan survei ilmiah tradisional.
+
+# Tantangan dan Potensi di Masa Depan
+
+Meskipun sains warga telah membuktikan potensinya dalam mendukung penelitian ekologi dan konservasi, inisiatif ini juga menghadapi berbagai tantangan. Salah satu tantangan utama adalah **ketimpangan taksonomi**.
+
+![Total temuan per kelas taksonomi di basis data GBIF [@callaghan2020]](biaa131fig1.JPG){fig-align="center"}
+
+Secara umum, satwa invertebrata cenderung kurang terwakili dalam basis data keanekaragaman hayati, sedangkan dalam kelompok vertebrata, burung dan mamalia cenderung lebih terwakili [@troudet2017]. Beberapa alasan untuk ketimpangan taksonomi semacam ini cukup jelas, beberapa organisme lebih sulit untuk dipelajari dibandingkan yang lain karena sulit ditemukan atau diidentifikasi hingga sulitnya literatur mengenai satwa invertebrata.
+
+Salah satu cara potensial untuk meminimalkan bias taksonomi adalah dengan menerapkan **gamifikasi**, proses di mana peserta diberi penghargaan atas observasi mereka dengan cara yang menyerupai permainan (misalnya, melalui pemberian hadiah atau apresiasi dalam bentuk lain). Gamifikasi dapat meningkatkan keterlibatan dan retensi peserta yang sudah ada, sekaligus menarik peserta baru untuk bergabung dalam proyek sains warga tertentu [@bowser2013; @chandler2016]. Gamifikasi dapat diintroduksi untuk mendorong peserta dalam mengidentifikasi kelompok taksonomi yang kurang terwakili seperti invertebrata
+
+Tantangan lain adalah **ketimpangan geografis**, di mana sebagian besar data sains warga berasal dari wilayah dengan infrastruktur teknologi yang lebih baik, sementara kawasan yang kaya akan keanekaragaman hayati, seperti Asia Tenggara dan Afrika, justru sering kurang terwakili. Hal ini menciptakan bias yang dapat menghambat pemahaman global tentang pola keanekaragaman hayati.
+
+![Total temuan di GBIF per kapita, negara-negara eropa dan amerika utara memiliki rekaman yang jauh lebih banyak dibandingkan negara-negara afrika dan asia tenggara [@callaghan2020]](biaa131fig12.jpeg){fig-align="center"}
+
+Banyak wilayah terpencil atau terisolasi di dunia yang jarang jarang dikunjungi oleh ilmuwan tradisional maupun peserta sains warga. Selain itu, banyak negara tidak memiliki sumber daya ekonomi yang memadai untuk mendukung lembaga penelitian ilmiah. Akibatnya, basis data ilmiah global sering kali memiliki kekurangan data yang parah di wilayah-wilayah tertentu. Namun, dengan menggabungkan sains warga dan sains profesional, daerah-daerah berkembang dan terpencil dapat memetakan keanekaragaman hayati mereka tanpa harus membangun institusi penelitian tradisional. Sains warga juga memberi peluang kepada masyarakat lokal untuk mendokumentasikan keanekaragaman hayati mereka, sekaligus memanfaatkan catatan dari penggemar keanekaragaman hayati yang sedang berlibur [@mieras2017]
+
+Ekowisata, terutama di wilayah terpencil, merupakan industri yang terus berkembang dan memiliki potensi untuk dikombinasikan dengan pengumpulan data sains warga. Sebagai contoh, Proyek sains warga [CoralWatch](https://coralwatch.org) juga telah berhasil melibatkan ekowisatawan untuk berpartisipasi dalam survei terumbu karang, termasuk di Indonesia [@marshall2012].
+
+# Penutup
+
+Sains warga membuka peluang bagi setiap individu untuk berkontribusi dalam penelitian ilmiah, tanpa harus menjadi seorang ilmuwan. Dengan melibatkan diri dalam kegiatan ini, Anda tidak hanya membantu memperluas cakupan data ilmiah, tetapi juga menjadi bagian dari upaya global untuk melestarikan keanekaragaman hayati. Apakah Anda seorang pengamat burung, penggemar serangga, atau sekadar pecinta alam, kontribusi Anda, sekecil apa pun, dapat membantu menjawab pertanyaan besar tentang ekosistem kita.
+
+Di Indonesia, terdapat banyak platform yang mendukung sains warga, seperti [Burungnesia](https://play.google.com/store/apps/details?id=com.sikebo.burungnesia.citizenScience2&hl=en), [Akar (Amati Sangkar)](https://play.google.com/store/apps/details?id=com.pasarnesia.app), [GO-ARK](http://perhimpunanherpetologi.com/go-ark/), [kupunesia](https://play.google.com/store/apps/details?id=org.kupunesia&hl=id), dan masih banyak lagi. Jadikan observasi dan dokumentasi Anda lebih bermakna dengan berkontribusi melalui salah satu platform tersebut. Bersama, kita dapat mengurangi kesenjangan data, memperkuat pemahaman tentang keanekaragaman hayati, dan mendorong aksi nyata untuk menghadapi tantangan lingkungan di masa depan.

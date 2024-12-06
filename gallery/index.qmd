@@ -2,6 +2,16 @@
 title: "Gallery"
 ---
 
+# Vlogs
+
+## Sungai Penuh
+
+{{< video https://www.youtube.com/watch?v=5_2gbNo92kc
+    title='Sungai Penuh with Fauna & Flora' 
+>}}
+
+------------------------------------------------------------------------
+
 # Cycling
 
 ## Mapay Kaluhur
@@ -25,8 +35,6 @@ title: "Gallery"
 {{< video https://www.youtube.com/watch?v=6SLz7ipog-s
     title='Trekking Gunung Kencana' 
 >}}
-
-----
 
 ## Trekking Batanta & Salawati
 
